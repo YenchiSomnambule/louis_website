@@ -56,32 +56,100 @@
 <main id="top">
 
 <!-- ───────── Hero ───────── -->
-<section class="hero hero-dark" id="hero">
+<section class="hero hero-flow" id="hero">
+  <div class="flow-wrap">
+    <svg class="flow" viewBox="0 0 960 300" role="img"
+         aria-label="A workflow map: forms, email and CRM records flow into an automation step, are validated or read by an AI agent, then written to the ERP and surfaced on a dashboard.">
+
+      <!-- invisible journeys the task tokens travel along -->
+      <defs>
+        <path id="j1" d="M140,62 C210,62 230,140 300,140 L460,140 C510,140 530,90 580,90 L720,90 L820,90"/>
+        <path id="j2" d="M140,140 L300,140 L460,140 C510,140 530,190 580,190 L720,190 L820,190"/>
+        <path id="j3" d="M140,218 C210,218 230,140 300,140 L460,140 C510,140 530,90 580,90 L720,90 L820,90"/>
+      </defs>
+
+      <!-- edges, drawn in sequence -->
+      <g class="edges" fill="none">
+        <path class="edge e1" pathLength="100" d="M140,62 C210,62 230,140 300,140"/>
+        <path class="edge e1" pathLength="100" d="M140,140 L300,140"/>
+        <path class="edge e1" pathLength="100" d="M140,218 C210,218 230,140 300,140"/>
+        <path class="edge e2" pathLength="100" d="M460,140 C510,140 530,90 580,90"/>
+        <path class="edge e2" pathLength="100" d="M460,140 C510,140 530,190 580,190"/>
+        <path class="edge e3" pathLength="100" d="M720,90 L820,90"/>
+        <path class="edge e3" pathLength="100" d="M720,190 L820,190"/>
+      </g>
+
+      <!-- stage 1: inputs -->
+      <g class="node s1">
+        <rect x="20" y="40" width="120" height="44" rx="12"/>
+        <text class="n-label" x="80" y="62" lang="zh">表單送出</text><text class="n-label" x="80" y="62" lang="en">Form filed</text>
+      </g>
+      <g class="node s1">
+        <rect x="20" y="118" width="120" height="44" rx="12"/>
+        <text class="n-label" x="80" y="140" lang="zh">收到 Email</text><text class="n-label" x="80" y="140" lang="en">Email in</text>
+      </g>
+      <g class="node s1">
+        <rect x="20" y="196" width="120" height="44" rx="12"/>
+        <text class="n-label" x="80" y="218" lang="zh">CRM 更新</text><text class="n-label" x="80" y="218" lang="en">CRM update</text>
+      </g>
+
+      <!-- stage 2: the automation -->
+      <g class="node hub s2">
+        <rect x="300" y="108" width="160" height="64" rx="16"/>
+        <text class="n-label" x="380" y="133" lang="zh">自動化流程</text><text class="n-label" x="380" y="133" lang="en">Automation</text>
+        <text class="n-sub" x="380" y="154" lang="zh">Power Automate · Python</text><text class="n-sub" x="380" y="154" lang="en">Power Automate · Python</text>
+      </g>
+
+      <!-- stage 3: branches -->
+      <g class="node s3">
+        <rect x="580" y="68" width="140" height="44" rx="12"/>
+        <text class="n-label" x="650" y="90" lang="zh">規則驗證</text><text class="n-label" x="650" y="90" lang="en">Rules check</text>
+      </g>
+      <g class="node s3">
+        <rect x="580" y="168" width="140" height="44" rx="12"/>
+        <text class="n-label" x="650" y="190" lang="zh">AI 判讀</text><text class="n-label" x="650" y="190" lang="en">AI reads it</text>
+      </g>
+
+      <!-- stage 4: outputs -->
+      <g class="node out s4">
+        <rect x="820" y="68" width="120" height="44" rx="12"/>
+        <text class="n-label" x="880" y="90" lang="zh">寫入 ERP</text><text class="n-label" x="880" y="90" lang="en">Into ERP</text>
+      </g>
+      <g class="node out s4">
+        <rect x="820" y="168" width="120" height="44" rx="12"/>
+        <text class="n-label" x="880" y="190" lang="zh">儀表板</text><text class="n-label" x="880" y="190" lang="en">Dashboard</text>
+      </g>
+
+      <!-- column captions -->
+      <text class="n-cap" x="80" y="275" lang="zh">INPUT</text><text class="n-cap" x="80" y="275" lang="en">INPUT</text>
+      <text class="n-cap" x="880" y="275" lang="zh">OUTPUT</text><text class="n-cap" x="880" y="275" lang="en">OUTPUT</text>
+
+      <!-- tasks streaming through -->
+      <g class="tokens">
+        <circle class="tok" r="5" opacity="0"><set attributeName="opacity" to="1" begin="2.4s"/><animateMotion dur="4.4s" begin="2.4s" repeatCount="indefinite"><mpath href="#j1"/></animateMotion></circle>
+        <circle class="tok" r="5" opacity="0"><set attributeName="opacity" to="1" begin="3.9s"/><animateMotion dur="4.4s" begin="3.9s" repeatCount="indefinite"><mpath href="#j1"/></animateMotion></circle>
+        <circle class="tok" r="5" opacity="0"><set attributeName="opacity" to="1" begin="2.9s"/><animateMotion dur="4.4s" begin="2.9s" repeatCount="indefinite"><mpath href="#j2"/></animateMotion></circle>
+        <circle class="tok" r="5" opacity="0"><set attributeName="opacity" to="1" begin="4.6s"/><animateMotion dur="4.4s" begin="4.6s" repeatCount="indefinite"><mpath href="#j2"/></animateMotion></circle>
+        <circle class="tok" r="5" opacity="0"><set attributeName="opacity" to="1" begin="3.4s"/><animateMotion dur="4.4s" begin="3.4s" repeatCount="indefinite"><mpath href="#j3"/></animateMotion></circle>
+        <circle class="tok" r="5" opacity="0"><set attributeName="opacity" to="1" begin="5.3s"/><animateMotion dur="4.4s" begin="5.3s" repeatCount="indefinite"><mpath href="#j3"/></animateMotion></circle>
+      </g>
+    </svg>
+  </div>
+
   <div class="hero-copy">
-    <p class="eyebrow">Louis Blanc (Yenchi)</p>
     <h1 class="headline-super">
       <span lang="zh">讓流程自己跑。</span>
       <span lang="en">Let the work run itself.</span>
     </h1>
-    <p class="subhead">
-      <span lang="zh">流程與數據自動化、AI Agent 建置、AI 商業落地。<br class="br-desktop">給想把重複工作交給系統的企業。</span>
-      <span lang="en">Process &amp; data automation, AI agents, and AI that actually ships. <br class="br-desktop">For businesses ready to hand repetitive work to a system.</span>
+    <p class="subhead subhead-dark">
+      <span lang="zh">流程與數據自動化、AI Agent 建置、AI 商業落地。</span>
+      <span lang="en">Process &amp; data automation, AI agents, and AI that actually ships.</span>
     </p>
-    <div class="cta-row">
-      <a href="#contact" class="link-cta"><span lang="zh">預約諮詢</span><span lang="en">Book a call</span></a>
-      <a href="#services" class="link-cta"><span lang="zh">看服務內容</span><span lang="en">See services</span></a>
+    <div class="cta-row cta-hero">
+      <a href="#contact" class="button"><span lang="zh">預約 30 分鐘諮詢</span><span lang="en">Book a 30‑min call</span></a>
     </div>
-  </div>
-  <div class="hero-visual" aria-hidden="true">
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
-    <div class="orb orb-3"></div>
-    <div class="hero-grid"></div>
-    <div class="hero-card">
-      <div class="hero-card-row"><span class="dot dot-green"></span><span>Power Automate · Flow OK</span><span class="mono">−80,000 req/day</span></div>
-      <div class="hero-card-row"><span class="dot dot-blue"></span><span>AI Agent · Ticket triage</span><span class="mono">auto‑routed</span></div>
-      <div class="hero-card-row"><span class="dot dot-purple"></span><span>ETL · Airflow DAG</span><span class="mono">02:00 nightly</span></div>
-      <div class="hero-card-row"><span class="dot dot-orange"></span><span>Dashboard · Dynamics 365</span><span class="mono">live</span></div>
+    <div class="cta-row">
+      <a href="#services" class="link-cta"><span lang="zh">看服務內容</span><span lang="en">See services</span></a>
     </div>
   </div>
 </section>
@@ -253,12 +321,12 @@
       </article>
       <article class="gcard gcard-green">
         <p class="gcard-kicker">Grand River · Algo trading</p>
-        <svg class="gcard-viz" viewBox="0 0 140 60" role="img" aria-label="Portfolio return trending up 17.25 percent">
+        <svg class="gcard-viz" viewBox="0 0 140 60" role="img" aria-label="Portfolio return trending up about 17 percent">
           <polyline points="2,52 26,45 50,47 74,32 98,26 128,8" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
           <circle cx="128" cy="8" r="4.5" fill="#fff"/>
           <line x1="0" y1="58" x2="140" y2="58" stroke="rgba(255,255,255,.3)" stroke-width="1"/>
         </svg>
-        <p class="gcard-number">17.25<span>%</span></p>
+        <p class="gcard-number">17<span>%</span></p>
         <p class="gcard-text"><span lang="zh">演算法交易策略帶來的報酬提升，並改善風險調整指標。</span><span lang="en">Return uplift from algorithmic strategies, with better risk‑adjusted metrics.</span></p>
       </article>
       <article class="gcard gcard-purple">
@@ -315,8 +383,8 @@
     <li class="step">
       <span class="step-num">02</span>
       <h3><span lang="zh">提案</span><span lang="en">Propose</span></h3>
-      <p><span lang="zh">固定報價、明確範圍、預估 ROI。沒有隱藏的工時。</span><span lang="en">Fixed quote, clear scope, estimated ROI. No hidden hours.</span></p>
-      <p class="step-deliv"><span lang="zh">交付：方案書、架構圖、時程</span><span lang="en">Deliverable: proposal, architecture, timeline</span></p>
+      <p><span lang="zh">範圍先講清楚，一起估算可能的回收。計價方式（專案制或時數制）可依需求討論。</span><span lang="en">We agree the scope first and estimate the payback together. How it's priced — per project or per hour — is something we work out to fit the job.</span></p>
+      <p class="step-deliv"><span lang="zh">交付：方案書、架構圖、時程與報價</span><span lang="en">Deliverable: proposal, architecture, timeline and quote</span></p>
     </li>
     <li class="step">
       <span class="step-num">03</span>
@@ -327,8 +395,8 @@
     <li class="step">
       <span class="step-num">04</span>
       <h3><span lang="zh">交接與維運</span><span lang="en">Hand over &amp; maintain</span></h3>
-      <p><span lang="zh">文件、教育訓練、監控告警。你的團隊能自己跑，也可以選擇月維運。</span><span lang="en">Docs, training, monitoring and alerts. Your team can run it, or keep me on a monthly retainer.</span></p>
-      <p class="step-deliv"><span lang="zh">交付：操作手冊、訓練、SLA</span><span lang="en">Deliverable: runbook, training, SLA</span></p>
+      <p><span lang="zh">文件、教育訓練、監控告警。目標是你的團隊能自己接手；後續維運與支援方式可以另外討論。</span><span lang="en">Docs, training, monitoring and alerts. The goal is that your team can run it themselves; ongoing support is something we can arrange separately if you want it.</span></p>
+      <p class="step-deliv"><span lang="zh">交付：操作手冊、教育訓練、交接說明</span><span lang="en">Deliverable: runbook, training, handover notes</span></p>
     </li>
   </ol>
 </section>
@@ -378,7 +446,7 @@
       <div class="exp-body">
         <h3>Quantitative Automation Developer <span class="exp-co">· Grand River Corporation</span></h3>
         <p class="exp-date">Jul 2020 – <span lang="zh">至今</span><span lang="en">Present</span></p>
-        <p><span lang="zh">建立財務模型與時間序列分析，以 Python 自動化交易工作流程。設計並實作演算法交易策略，報酬提升 17.25% 並改善風險調整指標。以 Tableau、Power BI 建置決策儀表板，並使用 TradingView、Thinkorswim 進行衍生性商品交易。</span><span lang="en">Built financial models and time‑series analysis, and automated trading workflows in Python. Designed and implemented algorithmic strategies delivering a 17.25% return uplift and better risk‑adjusted metrics. Built leadership dashboards in Tableau and Power BI, and traded derivatives via TradingView and Thinkorswim.</span></p>
+        <p><span lang="zh">建立財務模型與時間序列分析，以 Python 自動化交易工作流程。設計並實作演算法交易策略，報酬提升約 17% 並改善風險調整指標。以 Tableau、Power BI 建置決策儀表板，並使用 TradingView、Thinkorswim 進行衍生性商品交易。</span><span lang="en">Built financial models and time‑series analysis, and automated trading workflows in Python. Designed and implemented algorithmic strategies delivering roughly a 17% return uplift and better risk‑adjusted metrics. Built leadership dashboards in Tableau and Power BI, and traded derivatives via TradingView and Thinkorswim.</span></p>
       </div>
     </article>
     <article class="exp">
@@ -442,7 +510,6 @@
           <li><a href="mailto:yenchiwang.btmc@gmail.com">Email</a></li>
           <li><a href="https://www.linkedin.com/in/louis-blanc-99aab8381/" target="_blank" rel="noopener">LinkedIn</a></li>
           <li><a href="https://github.com/YenchiSomnambule" target="_blank" rel="noopener">GitHub</a></li>
-          <li><a href="https://yenchisomnambule.github.io/louisblanc.github.io/" target="_blank" rel="noopener"><span lang="zh">舊版網站</span><span lang="en">Previous site</span></a></li>
         </ul>
       </div>
     </div>

@@ -61,7 +61,6 @@ html[data-lang="zh"] body{letter-spacing:0}
 @media (max-width:734px){
   html[data-lang="zh"] .headline-super{font-size:46px;line-height:1.1}
   html[data-lang="zh"] .headline-hero{font-size:34px;line-height:1.15}
-  .hero-card{font-size:13px}.hero-card-row{padding:11px 12px;gap:10px}
   html[data-lang="zh"] .tile-headline{font-size:34px}
 }
 .br-desktop{display:none}
@@ -186,41 +185,69 @@ html[data-lang="zh"] body{letter-spacing:0}
   position:relative;overflow:hidden;text-align:center;
   padding:64px 22px 0;min-height:580px;display:flex;flex-direction:column;align-items:center;
 }
-.hero-dark{background:var(--color-bg-dark);color:var(--color-text-light)}
-.hero-dark .link-cta{color:var(--color-link-dark)}
 .hero-light{background:var(--color-bg-alt);color:var(--color-text);padding-bottom:0}
 .hero-light .subhead{color:var(--color-text-secondary)}
 .hero-copy{position:relative;z-index:2;max-width:820px}
 .hero-light .subhead{max-width:700px;margin-left:auto;margin-right:auto}
 @media (min-width:735px){.hero{padding-top:80px;min-height:692px}}
 
-/* hero visual: glowing orbs + floating "ops" card */
-.hero-visual{position:relative;width:100%;max-width:1100px;height:360px;margin-top:54px;z-index:1}
-.orb{position:absolute;border-radius:50%;filter:blur(60px);opacity:.75;mix-blend-mode:screen}
-.orb-1{width:520px;height:520px;left:50%;top:-40px;transform:translateX(-70%);background:radial-gradient(circle at 30% 30%,#2997ff,#0a3fa8 60%,transparent 72%)}
-.orb-2{width:460px;height:460px;left:50%;top:10px;transform:translateX(-15%);background:radial-gradient(circle at 60% 40%,#bf5af2,#5e1fa8 60%,transparent 72%)}
-.orb-3{width:380px;height:380px;left:50%;top:120px;transform:translateX(-50%);background:radial-gradient(circle,#ff9f0a,#ff375f 55%,transparent 72%);opacity:.55}
-.hero-grid{
-  position:absolute;inset:0;
-  background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);
-  background-size:40px 40px;
-  -webkit-mask-image:radial-gradient(ellipse at center,#000 30%,transparent 72%);mask-image:radial-gradient(ellipse at center,#000 30%,transparent 72%);
+
+/* ---------- Hero: automation flow map ---------- */
+.hero-flow{
+  background:linear-gradient(180deg,#fff 0%,#fbfbfd 70%,#f5f5f7 100%);
+  color:var(--color-text);
+  padding:44px 0 76px;
+  min-height:auto;
+  justify-content:flex-start;
 }
-.hero-card{
-  position:absolute;left:50%;top:40px;transform:translateX(-50%);
-  width:min(560px,92%);
-  background:rgba(29,29,31,.72);border:1px solid rgba(255,255,255,.12);
-  -webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);
-  border-radius:18px;padding:12px 8px;
-  box-shadow:0 30px 80px rgba(0,0,0,.6);
-  text-align:left;font-size:14px;letter-spacing:-.01em;
+.hero-flow .headline-super{color:var(--color-text);text-wrap:balance}
+.hero-flow .subhead{color:var(--color-text-secondary)}
+.cta-hero{margin-top:26px}
+.cta-hero + .cta-row{margin-top:16px}
+
+.flow-wrap{width:100%;max-width:1060px;margin:0 auto 10px;padding:0 22px;overflow-x:auto;overflow-y:hidden}
+.flow{width:100%;min-width:660px;height:auto;display:block}
+
+.flow .edge{stroke:#c7c7cc;stroke-width:1.5}
+.flow .node rect{fill:#fff;stroke:#d2d2d7;stroke-width:1}
+.flow .hub rect{fill:var(--color-button);stroke:none}
+.flow .out rect{fill:#f5f5f7;stroke:#d2d2d7}
+.flow text{font-family:var(--font-sys);text-anchor:middle;dominant-baseline:middle}
+.flow .n-label{font-size:15px;font-weight:500;fill:var(--color-text);letter-spacing:-.01em}
+.flow .hub .n-label{fill:#fff;font-weight:600;font-size:16px}
+.flow .n-sub{font-size:11px;fill:rgba(255,255,255,.78);font-weight:400}
+.flow .n-cap{font-size:11px;font-weight:600;fill:#a1a1a6;letter-spacing:.14em}
+.flow .tok{fill:var(--color-button)}
+
+@media (prefers-reduced-motion:no-preference){
+  /* the map draws itself in, stage by stage */
+  .flow .edge{stroke-dasharray:100;stroke-dashoffset:100;animation:flow-draw .65s ease forwards}
+  .flow .e1{animation-delay:.35s}
+  .flow .e2{animation-delay:1.05s}
+  .flow .e3{animation-delay:1.7s}
+  .flow .node{opacity:0;transform-box:fill-box;transform-origin:center;animation:flow-pop .5s cubic-bezier(.2,.7,.2,1) forwards}
+  .flow .s1{animation-delay:.05s}
+  .flow .s2{animation-delay:.75s}
+  .flow .s3{animation-delay:1.4s}
+  .flow .s4{animation-delay:2s}
+  .flow .n-cap{opacity:0;animation:flow-fade .6s ease 2.2s forwards}
+  @keyframes flow-draw{to{stroke-dashoffset:0}}
+  @keyframes flow-pop{from{opacity:0;transform:translateY(6px) scale(.94)}to{opacity:1;transform:none}}
+  @keyframes flow-fade{to{opacity:1}}
 }
-.hero-card-row{display:grid;grid-template-columns:14px 1fr auto;align-items:center;gap:12px;padding:12px 14px;border-radius:12px;color:#f5f5f7}
-.hero-card-row + .hero-card-row{border-top:1px solid rgba(255,255,255,.08)}
-.hero-card-row .mono{font-family:"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;font-size:12px;color:var(--color-text-light-secondary)}
-.dot{width:8px;height:8px;border-radius:50%;display:block;box-shadow:0 0 0 3px rgba(255,255,255,.08)}
-.dot-green{background:#30d158}.dot-blue{background:#2997ff}.dot-purple{background:#bf5af2}.dot-orange{background:#ff9f0a}
-@media (max-width:734px){.hero-visual{height:300px;margin-top:40px}.orb{filter:blur(40px)}}
+@media (prefers-reduced-motion:reduce){
+  .flow .tokens{display:none}
+}
+
+@media (max-width:734px){
+  .hero-flow{padding:28px 0 60px}
+  .flow-wrap{padding:0 16px}
+  .flow{min-width:600px}
+  .flow .n-label{font-size:20px}
+  .flow .hub .n-label{font-size:21px}
+  .flow .n-sub{font-size:15px}
+  .flow .n-cap{font-size:15px}
+}
 
 /* stat strip for featured (light) hero */
 .stat-strip{width:100%;max-width:820px;margin:56px auto 0;padding-bottom:80px}
