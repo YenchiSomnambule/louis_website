@@ -250,11 +250,42 @@
         <a href="#contact" class="link-cta"><span lang="zh">討論需求</span><span lang="en">Discuss</span></a>
       </div>
     </div>
-    <div class="tile-art tile-art-agent" aria-hidden="true">
-      <div class="chat">
-        <div class="bubble bubble-user"><span lang="zh">上週退貨率最高的三個 SKU？</span><span lang="en">Top 3 SKUs by return rate last week?</span></div>
-        <div class="bubble bubble-agent"><span class="tool">▸ query_sales(week=-1)</span><span class="tool">▸ rank(return_rate)</span><span lang="zh">SKU‑1042、SKU‑0871、SKU‑2210。已附上原因分析與建議動作。</span><span lang="en">SKU‑1042, SKU‑0871, SKU‑2210. Root causes and suggested actions attached.</span></div>
-      </div>
+    <div class="tile-art tile-art-loop">
+      <svg class="loop" viewBox="0 0 800 190" role="img"
+           aria-label="How an agent runs: a question comes in, the agent reads your data and calls your systems, a human approves the steps you choose, then it answers and logs what it did.">
+        <g class="edges" fill="none">
+          <path class="l-edge" d="M156,95 L216,95"/>
+          <path class="l-edge" d="M464,95 L524,95"/>
+          <path class="l-edge" d="M676,95 L736,95"/>
+        </g>
+
+        <g class="l-node">
+          <rect x="16" y="71" width="140" height="48" rx="12"/>
+          <text class="l-label" x="86" y="95" lang="zh">問題進來</text><text class="l-label" x="86" y="95" lang="en">A question</text>
+        </g>
+
+        <g class="l-node l-core">
+          <rect x="216" y="34" width="248" height="122" rx="18"/>
+          <text class="l-title" x="340" y="60" lang="zh">Agent</text><text class="l-title" x="340" y="60" lang="en">Agent</text>
+          <rect class="l-chip" x="238" y="80" width="204" height="30" rx="9"/>
+          <text class="l-chip-t" x="340" y="95" lang="zh">讀取你的資料</text><text class="l-chip-t" x="340" y="95" lang="en">Reads your data</text>
+          <rect class="l-chip" x="238" y="116" width="204" height="30" rx="9"/>
+          <text class="l-chip-t" x="340" y="131" lang="zh">呼叫你的系統</text><text class="l-chip-t" x="340" y="131" lang="en">Calls your systems</text>
+        </g>
+
+        <g class="l-node l-gate">
+          <rect x="524" y="71" width="152" height="48" rx="12"/>
+          <text class="l-label" x="600" y="95" lang="zh">人工審核</text><text class="l-label" x="600" y="95" lang="en">You approve</text>
+        </g>
+
+        <g class="l-node">
+          <rect x="736" y="71" width="48" height="48" rx="12"/>
+          <path class="l-tick" d="M750,95 l8,9 l16,-19" fill="none"/>
+        </g>
+
+        <text class="l-cap" x="86" y="168" lang="zh">輸入</text><text class="l-cap" x="86" y="168" lang="en">In</text>
+        <text class="l-cap" x="600" y="168" lang="zh">你決定哪幾步要人看</text><text class="l-cap" x="600" y="168" lang="en">You choose which steps need a human</text>
+      </svg>
     </div>
     <ul class="tile-bullets">
       <li><span lang="zh">Claude / OpenAI / 開源模型，依成本與資料敏感度選型</span><span lang="en">Claude / OpenAI / open models, chosen by cost and data sensitivity</span></li>
@@ -275,11 +306,19 @@
           <a href="#process" class="link-cta"><span lang="zh">了解流程</span><span lang="en">Learn more</span></a>
         </div>
       </div>
-      <div class="tile-art tile-art-roi" aria-hidden="true">
-        <div class="roi-row"><span lang="zh">場景盤點</span><span lang="en">Use‑case audit</span><i style="--w:40%"></i></div>
-        <div class="roi-row"><span lang="zh">POC</span><span lang="en">POC</span><i style="--w:60%"></i></div>
-        <div class="roi-row"><span lang="zh">上線</span><span lang="en">Production</span><i style="--w:85%"></i></div>
-        <div class="roi-row"><span lang="zh">回收</span><span lang="en">Payback</span><i style="--w:100%"></i></div>
+      <div class="tile-art tile-art-steps">
+        <svg class="steps-viz" viewBox="0 0 460 96" role="img"
+             aria-label="The order of the work: use-case audit, then a proof of concept, then production, then payback.">
+          <line class="sv-rail" x1="30" y1="34" x2="430" y2="34"/>
+          <circle class="sv-dot" cx="30"  cy="34" r="7"/>
+          <circle class="sv-dot" cx="163" cy="34" r="7"/>
+          <circle class="sv-dot" cx="296" cy="34" r="7"/>
+          <circle class="sv-dot sv-dot-end" cx="430" cy="34" r="9"/>
+          <text class="sv-t" x="30" y="66" lang="zh">場景盤點</text><text class="sv-t" x="30" y="66" lang="en">Audit</text>
+          <text class="sv-t" x="163" y="66" lang="zh">POC</text><text class="sv-t" x="163" y="66" lang="en">POC</text>
+          <text class="sv-t" x="296" y="66" lang="zh">上線</text><text class="sv-t" x="296" y="66" lang="en">Production</text>
+          <text class="sv-t" x="430" y="66" lang="zh">回收</text><text class="sv-t" x="430" y="66" lang="en">Payback</text>
+        </svg>
       </div>
     </article>
 
