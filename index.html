@@ -56,14 +56,84 @@
 <main id="top">
 
 <!-- ───────── Hero ───────── -->
-<section class="hero hero-shine" id="hero">
-  <div class="emblem" aria-hidden="true">
-    <div class="emblem-halo"></div>
-    <svg class="emblem-mark emblem-bloom-warm" viewBox="0 0 240 240"><use href="#spark"/></svg>
-    <svg class="emblem-mark emblem-bloom-cool" viewBox="0 0 240 240"><use href="#spark"/></svg>
-    <svg class="emblem-mark emblem-line" viewBox="0 0 240 240"><use href="#spark"/></svg>
-    <div class="emblem-core"></div>
-    <div class="emblem-streak"></div>
+<section class="hero hero-flow" id="hero">
+  <div class="flow-wrap">
+    <svg class="flow" viewBox="0 0 960 300" role="img"
+         aria-label="A workflow map: forms, email and CRM records flow into an automation step, are validated or read by an AI agent, then written to the ERP and surfaced on a dashboard.">
+
+      <!-- invisible journeys the task tokens travel along -->
+      <defs>
+        <path id="j1" d="M140,62 C210,62 230,140 300,140 L460,140 C510,140 530,90 580,90 L720,90 L820,90"/>
+        <path id="j2" d="M140,140 L300,140 L460,140 C510,140 530,190 580,190 L720,190 L820,190"/>
+        <path id="j3" d="M140,218 C210,218 230,140 300,140 L460,140 C510,140 530,90 580,90 L720,90 L820,90"/>
+      </defs>
+
+      <!-- edges, drawn in sequence -->
+      <g class="edges" fill="none">
+        <path class="edge e1" pathLength="100" d="M140,62 C210,62 230,140 300,140"/>
+        <path class="edge e1" pathLength="100" d="M140,140 L300,140"/>
+        <path class="edge e1" pathLength="100" d="M140,218 C210,218 230,140 300,140"/>
+        <path class="edge e2" pathLength="100" d="M460,140 C510,140 530,90 580,90"/>
+        <path class="edge e2" pathLength="100" d="M460,140 C510,140 530,190 580,190"/>
+        <path class="edge e3" pathLength="100" d="M720,90 L820,90"/>
+        <path class="edge e3" pathLength="100" d="M720,190 L820,190"/>
+      </g>
+
+      <!-- stage 1: inputs -->
+      <g class="node s1">
+        <rect x="20" y="40" width="120" height="44" rx="12"/>
+        <text class="n-label" x="80" y="62" lang="zh">表單送出</text><text class="n-label" x="80" y="62" lang="en">Form filed</text>
+      </g>
+      <g class="node s1">
+        <rect x="20" y="118" width="120" height="44" rx="12"/>
+        <text class="n-label" x="80" y="140" lang="zh">收到 Email</text><text class="n-label" x="80" y="140" lang="en">Email in</text>
+      </g>
+      <g class="node s1">
+        <rect x="20" y="196" width="120" height="44" rx="12"/>
+        <text class="n-label" x="80" y="218" lang="zh">CRM 更新</text><text class="n-label" x="80" y="218" lang="en">CRM update</text>
+      </g>
+
+      <!-- stage 2: the automation -->
+      <g class="node hub s2">
+        <rect x="300" y="108" width="160" height="64" rx="16"/>
+        <text class="n-label" x="380" y="133" lang="zh">自動化流程</text><text class="n-label" x="380" y="133" lang="en">Automation</text>
+        <text class="n-sub" x="380" y="154" lang="zh">Power Automate · Python</text><text class="n-sub" x="380" y="154" lang="en">Power Automate · Python</text>
+      </g>
+
+      <!-- stage 3: branches -->
+      <g class="node s3">
+        <rect x="580" y="68" width="140" height="44" rx="12"/>
+        <text class="n-label" x="650" y="90" lang="zh">規則驗證</text><text class="n-label" x="650" y="90" lang="en">Rules check</text>
+      </g>
+      <g class="node s3">
+        <rect x="580" y="168" width="140" height="44" rx="12"/>
+        <text class="n-label" x="650" y="190" lang="zh">AI 判讀</text><text class="n-label" x="650" y="190" lang="en">AI reads it</text>
+      </g>
+
+      <!-- stage 4: outputs -->
+      <g class="node out s4">
+        <rect x="820" y="68" width="120" height="44" rx="12"/>
+        <text class="n-label" x="880" y="90" lang="zh">寫入 ERP</text><text class="n-label" x="880" y="90" lang="en">Into ERP</text>
+      </g>
+      <g class="node out s4">
+        <rect x="820" y="168" width="120" height="44" rx="12"/>
+        <text class="n-label" x="880" y="190" lang="zh">儀表板</text><text class="n-label" x="880" y="190" lang="en">Dashboard</text>
+      </g>
+
+      <!-- column captions -->
+      <text class="n-cap" x="80" y="275" lang="zh">INPUT</text><text class="n-cap" x="80" y="275" lang="en">INPUT</text>
+      <text class="n-cap" x="880" y="275" lang="zh">OUTPUT</text><text class="n-cap" x="880" y="275" lang="en">OUTPUT</text>
+
+      <!-- tasks streaming through -->
+      <g class="tokens">
+        <circle class="tok" r="5" opacity="0"><set attributeName="opacity" to="1" begin="2.4s"/><animateMotion dur="4.4s" begin="2.4s" repeatCount="indefinite"><mpath href="#j1"/></animateMotion></circle>
+        <circle class="tok" r="5" opacity="0"><set attributeName="opacity" to="1" begin="3.9s"/><animateMotion dur="4.4s" begin="3.9s" repeatCount="indefinite"><mpath href="#j1"/></animateMotion></circle>
+        <circle class="tok" r="5" opacity="0"><set attributeName="opacity" to="1" begin="2.9s"/><animateMotion dur="4.4s" begin="2.9s" repeatCount="indefinite"><mpath href="#j2"/></animateMotion></circle>
+        <circle class="tok" r="5" opacity="0"><set attributeName="opacity" to="1" begin="4.6s"/><animateMotion dur="4.4s" begin="4.6s" repeatCount="indefinite"><mpath href="#j2"/></animateMotion></circle>
+        <circle class="tok" r="5" opacity="0"><set attributeName="opacity" to="1" begin="3.4s"/><animateMotion dur="4.4s" begin="3.4s" repeatCount="indefinite"><mpath href="#j3"/></animateMotion></circle>
+        <circle class="tok" r="5" opacity="0"><set attributeName="opacity" to="1" begin="5.3s"/><animateMotion dur="4.4s" begin="5.3s" repeatCount="indefinite"><mpath href="#j3"/></animateMotion></circle>
+      </g>
+    </svg>
   </div>
 
   <div class="hero-copy">
@@ -71,30 +141,18 @@
       <span lang="zh">讓流程自己跑。</span>
       <span lang="en">Let the work run itself.</span>
     </h1>
-    <p class="subhead subhead-shine">
+    <p class="subhead subhead-dark">
       <span lang="zh">流程與數據自動化、AI Agent 建置、AI 商業落地。</span>
       <span lang="en">Process &amp; data automation, AI agents, and AI that actually ships.</span>
     </p>
-    <div class="cta-row cta-shine">
-      <a href="#contact" class="button button-shine"><span lang="zh">預約 30 分鐘諮詢</span><span lang="en">Book a 30‑min call</span></a>
+    <div class="cta-row cta-hero">
+      <a href="#contact" class="button"><span lang="zh">預約 30 分鐘諮詢</span><span lang="en">Book a 30‑min call</span></a>
     </div>
     <div class="cta-row">
-      <a href="#services" class="link-cta link-cta-shine"><span lang="zh">看服務內容</span><span lang="en">See services</span></a>
+      <a href="#services" class="link-cta"><span lang="zh">看服務內容</span><span lang="en">See services</span></a>
     </div>
   </div>
 </section>
-
-<svg width="0" height="0" aria-hidden="true" style="position:absolute">
-  <defs>
-    <path id="spark" d="M120 16 C132 66, 174 108, 224 120 C174 132, 132 174, 120 224 C108 174, 66 132, 16 120 C66 108, 108 66, 120 16 Z"/>
-    <linearGradient id="rim" x1="100%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0" stop-color="#d9f2ff"/>
-      <stop offset=".42" stop-color="#ffffff"/>
-      <stop offset=".74" stop-color="#ffbf9a"/>
-      <stop offset="1" stop-color="#ff8f6d"/>
-    </linearGradient>
-  </defs>
-</svg>
 
 <!-- ───────── About ───────── -->
 <section class="about-section" id="about">
