@@ -43,19 +43,8 @@
     });
   }
 
-  /* ---------- Gallery arrows ---------- */
-  var gallery = document.querySelector('.gallery');
-  document.querySelectorAll('[data-scroll]').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      if (!gallery) return;
-      var card = gallery.querySelector('.gcard');
-      var step = card ? card.getBoundingClientRect().width + 20 : 400;
-      gallery.scrollBy({ left: step * Number(btn.getAttribute('data-scroll')), behavior: 'smooth' });
-    });
-  });
-
   /* ---------- Scroll reveal ---------- */
-  var targets = document.querySelectorAll('.tile, .gcard, .step, .exp, .stack-col, .about-inner, .section-head');
+  var targets = document.querySelectorAll('.service, .step, .role, .stack > div, .creds > div, .figure, .ledger tbody tr');
   if ('IntersectionObserver' in window) {
     targets.forEach(function (el) { el.classList.add('reveal'); });
     var io = new IntersectionObserver(function (entries) {
