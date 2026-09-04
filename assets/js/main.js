@@ -44,7 +44,7 @@
   }
 
   /* ---------- Scroll reveal ---------- */
-  var targets = document.querySelectorAll('.service, .step, .role, .stack > div, .creds > div, .figure, .ledger tbody tr');
+  var targets = document.querySelectorAll('.offer, .step, .role, .symptoms li, .fit-list li, .facts > div, .figure, .ledger tbody tr');
   if ('IntersectionObserver' in window) {
     targets.forEach(function (el) { el.classList.add('reveal'); });
     var io = new IntersectionObserver(function (entries) {

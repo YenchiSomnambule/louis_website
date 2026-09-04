@@ -333,31 +333,83 @@ html[data-lang="en"] .lang-btn-footer[data-set-lang="en"]{color:var(--ink);font-
 .loop .l-tick{stroke:var(--plate-accent);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
 
 /* ==========================================================
-   ABOUT
+   HERO FACTS — three facts a buyer can use, not a biography
    ========================================================== */
-.portrait{width:var(--rail);height:var(--rail);object-fit:cover;object-position:center top;margin-bottom:var(--s3)}
-@media (max-width:1023px){.portrait{width:140px;height:140px}}
-.creds{margin-top:var(--s5);display:grid;grid-template-columns:1fr;gap:var(--s4)}
-@media (min-width:700px){.creds{grid-template-columns:1fr 1fr;gap:var(--s5)}}
-.creds h3{margin-bottom:var(--s2);padding-bottom:var(--s1);border-bottom:1px solid var(--rule)}
-.creds li{
-  display:flex;align-items:center;gap:var(--s2);
-  padding:10px 0;border-bottom:1px solid var(--rule);
-  font-size:var(--size-micro);line-height:1.45;
+.facts{
+  margin-top:var(--s5);padding-top:var(--s3);border-top:1px solid var(--rule-strong);
+  display:grid;grid-template-columns:1fr;gap:var(--s3);
 }
-.creds li:last-child{border-bottom:0}
-.creds li img{width:24px;height:24px;object-fit:contain;flex:0 0 24px}
+@media (min-width:700px){.facts{grid-template-columns:repeat(3,1fr);gap:var(--s4)}}
+.facts dt{
+  font-size:var(--size-label);font-weight:var(--weight-strong);
+  text-transform:var(--label-case);letter-spacing:var(--track-label);color:var(--ink-soft);
+}
+.facts dd{margin:var(--s1) 0 0;font-size:var(--size-micro);color:var(--ink-soft);line-height:1.5}
+.facts-fig{
+  display:block;font-family:var(--font-display);font-weight:var(--weight-display);
+  font-size:var(--size-figure);line-height:1.05;color:var(--ink);
+  font-variant-numeric:tabular-nums;margin-bottom:4px;
+}
 
 /* ==========================================================
-   SERVICES — four entries in one list, not four full-bleed slides
+   SYMPTOMS — the reason a buyer is on this page
    ========================================================== */
-.service{padding:var(--s4) 0;border-top:1px solid var(--rule)}
-.service:first-of-type{border-top:0;padding-top:0}
-.service .h-section{margin-top:var(--s1)}
-.service-tools{margin-top:var(--s3);font-size:var(--size-micro);color:var(--ink-soft)}
-.service-tools li{padding:6px 0;border-top:1px solid var(--rule)}
-.service-tools li:first-child{border-top:0}
+.symptoms{margin-top:var(--s4);max-width:var(--measure)}
+.symptoms li{
+  padding:var(--s3) 0 var(--s3) var(--s4);border-top:1px solid var(--rule);
+  position:relative;font-size:var(--size-lead);line-height:var(--lh-lead);
+}
+.symptoms li:last-child{border-bottom:1px solid var(--rule)}
+.symptoms li::before{
+  content:"";position:absolute;left:0;top:calc(var(--s3) + .6em);
+  width:var(--s3);height:1px;background:var(--rule-strong);
+}
+.symptoms + .body{margin-top:var(--s4)}
+
+/* ==========================================================
+   OFFERS — each one states what you receive
+   ========================================================== */
+.offer{padding:var(--s5) 0 var(--s4);border-top:1px solid var(--rule-strong)}
+.offer > h3{font-size:calc(var(--size-lead) + 5px);line-height:1.25}
+.offer:first-of-type{border-top:0;padding-top:var(--s4)}
+.offer-spec{margin-top:var(--s4);border-top:1px solid var(--rule)}
+.offer-spec > div{
+  display:grid;grid-template-columns:1fr;gap:2px;
+  padding:var(--s2) 0;border-bottom:1px solid var(--rule);
+}
+.offer-spec > div:last-child{border-bottom:0}
+@media (min-width:700px){
+  .offer-spec > div{grid-template-columns:150px minmax(0,1fr);gap:var(--s3);align-items:baseline}
+}
+.offer-spec dt{
+  font-size:var(--size-label);font-weight:var(--weight-strong);
+  text-transform:var(--label-case);letter-spacing:var(--track-label);color:var(--ink-soft);
+}
+.offer-spec dd{margin:0;font-size:var(--size-micro);line-height:1.55}
 .dash-shot{margin-top:var(--s4);max-width:min(420px,100%);border:1px solid var(--rule-strong)}
+
+/* ==========================================================
+   FIT — saying no is part of the offer
+   ========================================================== */
+.fit{display:grid;grid-template-columns:1fr;gap:var(--s5);margin-top:var(--s4)}
+@media (min-width:820px){.fit{grid-template-columns:1fr 1fr;gap:var(--s5)}}
+.fit h3{margin-bottom:var(--s2);padding-bottom:var(--s1);border-bottom:1px solid var(--rule-strong)}
+.fit-list li{
+  padding:var(--s2) 0 var(--s2) var(--s3);border-bottom:1px solid var(--rule);
+  position:relative;font-size:var(--size-micro);line-height:1.6;
+}
+.fit-list li::before{
+  position:absolute;left:0;top:var(--s2);font-weight:var(--weight-strong);
+}
+.fit-yes li::before{content:"+";color:var(--accent)}
+.fit-no li::before{content:"–";color:var(--ink-soft)}
+
+/* ==========================================================
+   WHO — credentials in service of capability, near the end
+   ========================================================== */
+.portrait{width:var(--rail);height:var(--rail);object-fit:cover;object-position:center top;margin-bottom:var(--s3)}
+@media (max-width:1023px){.portrait{width:120px;height:120px}}
+.built{margin-top:var(--s5)}
 
 /* ==========================================================
    RESULTS — a ledger with a basis column, not a colour rail
@@ -403,14 +455,6 @@ html[data-lang="en"] .lang-btn-footer[data-set-lang="en"]{color:var(--ink);font-
   padding-top:var(--s2);border-top:1px solid var(--rule);
 }
 @media (min-width:700px){.step-deliv{border-top:0;padding-top:2px;border-left:1px solid var(--rule);padding-left:var(--s3)}}
-
-/* ==========================================================
-   STACK
-   ========================================================== */
-.stack{display:grid;grid-template-columns:1fr 1fr;gap:var(--s4) var(--s3);margin-top:var(--s4)}
-@media (min-width:900px){.stack{grid-template-columns:repeat(4,1fr)}}
-.stack h3{margin-bottom:var(--s2);padding-bottom:var(--s1);border-bottom:1px solid var(--rule-strong)}
-.stack li{font-size:var(--size-micro);color:var(--ink-soft);padding:5px 0}
 
 /* ==========================================================
    EXPERIENCE
