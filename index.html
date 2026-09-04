@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Louis Blanc — 流程自動化 · AI Agent · AI 商業落地</title>
-  <meta name="description" content="把每週重複的人工作業交給系統。流程與數據自動化、AI Agent 建置、AI 商業落地。Process automation, AI agents and AI integration for businesses that already run on CRM, ERP and spreadsheets.">
+  <meta name="description" content="Louis Blanc (Yenchi) — 流程與數據自動化、AI Agent 建置、AI 商業落地顧問。Process & data automation, AI agent deployment and AI business integration for SMBs.">
   <meta property="og:title" content="Louis Blanc — 流程自動化 · AI Agent · AI 商業落地">
   <meta property="og:description" content="把重複的流程交給系統，把 AI 真正放進你的業務裡。">
   <meta property="og:type" content="website">
@@ -12,572 +12,539 @@
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Spectral:wght@500;600&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-<!-- ───────── Nav ───────── -->
-<nav class="globalnav" aria-label="Global">
+<!-- ───────── Global nav ───────── -->
+<nav class="globalnav" id="globalnav" aria-label="Global">
   <div class="globalnav-content">
-    <a href="#top" class="globalnav-brand">Louis Blanc</a>
-    <button class="globalnav-menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="globalnavList">
-      <span lang="zh">選單</span><span lang="en">Menu</span>
+    <a href="#top" class="globalnav-brand" aria-label="Louis Blanc — Home">
+      <svg class="brand-mark" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 2l2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4z" fill="currentColor"/></svg>
+      <span>Louis Blanc</span>
+    </a>
+    <button class="globalnav-menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="globalnavList" aria-label="Menu">
+      <span></span><span></span>
     </button>
     <ul class="globalnav-list" id="globalnavList">
-      <li><a href="#symptoms"><span lang="zh">問題</span><span lang="en">Symptoms</span></a></li>
-      <li><a href="#offers"><span lang="zh">服務</span><span lang="en">Services</span></a></li>
+      <li><a href="#about"><span lang="zh">關於</span><span lang="en">About</span></a></li>
+      <li><a href="#services"><span lang="zh">服務</span><span lang="en">Services</span></a></li>
       <li><a href="#results"><span lang="zh">成果</span><span lang="en">Results</span></a></li>
-      <li><a href="#process"><span lang="zh">合作方式</span><span lang="en">How it works</span></a></li>
-      <li><a href="#fit"><span lang="zh">適合與否</span><span lang="en">Fit</span></a></li>
-      <li><a href="#who"><span lang="zh">關於我</span><span lang="en">About</span></a></li>
+      <li><a href="#process"><span lang="zh">合作流程</span><span lang="en">How it works</span></a></li>
+      <li><a href="#stack"><span lang="zh">技術</span><span lang="en">Stack</span></a></li>
+      <li><a href="#experience"><span lang="zh">經歷</span><span lang="en">Experience</span></a></li>
       <li><a href="#contact"><span lang="zh">聯絡</span><span lang="en">Contact</span></a></li>
       <li class="globalnav-lang">
         <button type="button" class="lang-btn" data-set-lang="zh" aria-label="切換為繁體中文">繁中</button>
-        <span class="lang-sep" aria-hidden="true">/</span>
+        <span class="lang-sep" aria-hidden="true">|</span>
         <button type="button" class="lang-btn" data-set-lang="en" aria-label="Switch to English">EN</button>
       </li>
     </ul>
   </div>
 </nav>
 
+<!-- ───────── Ribbon ───────── -->
+<div class="ribbon" role="note">
+  <div class="ribbon-content">
+    <span lang="zh">2026 Q4 尚有接案檔期。流程自動化、AI Agent 導入、AI 商業落地。</span>
+    <span lang="en">Now booking for Q4 2026. Automation, AI agents and AI business integration.</span>
+    <a href="#contact" class="ribbon-link"><span lang="zh">預約 30 分鐘免費諮詢</span><span lang="en">Book a free 30‑min call</span></a>
+  </div>
+</div>
+
 <main id="top">
 
 <!-- ───────── Hero ───────── -->
-<section class="hero" id="hero">
-  <div class="doc">
-    <div class="terms">
-      <dl>
-        <dt><span lang="zh">檔期</span><span lang="en">Availability</span></dt>
-        <dd><span lang="zh">2026 Q4 起可接案</span><span lang="en">Booking from Q4 2026</span></dd>
-        <dt><span lang="zh">工作方式</span><span lang="en">Working</span></dt>
-        <dd><span lang="zh">遠端 · 中文／英文<br>加拿大 Winnipeg（CST）</span><span lang="en">Remote · Mandarin / English<br>Winnipeg, Canada (CST)</span></dd>
-        <dt><span lang="zh">起始</span><span lang="en">First step</span></dt>
-        <dd><span lang="zh">30 分鐘免費諮詢，不需準備資料</span><span lang="en">A free 30‑minute call. Nothing to prepare.</span></dd>
-      </dl>
-    </div>
+<section class="hero hero-flow" id="hero">
+  <div class="flow-wrap">
+    <svg class="flow" viewBox="0 0 960 300" role="img"
+         aria-label="A workflow map: forms, email and CRM records flow into an automation step, are validated or read by an AI agent, then written to the ERP and surfaced on a dashboard.">
 
-    <div>
-      <p class="label"><span lang="zh">流程與數據自動化 · AI Agent 建置 · AI 商業落地</span><span lang="en">Process automation · AI agents · AI integration</span></p>
-      <h1 class="h-display">
-        <span lang="zh">讓流程自己跑。</span>
-        <span lang="en">Let the work run itself.</span>
-      </h1>
-      <p class="lead">
-        <span lang="zh">你的團隊每週花在抄資料、對帳、轉單的時間，大部分可以要回來。我負責找出哪些環節值得自動化、把它做出來，然後交給你的人維護。</span>
-        <span lang="en">Most of the hours your team spends re-keying data, reconciling systems and routing requests are recoverable. I work out which steps are worth automating, build them, and hand them to your people to run.</span>
-      </p>
-      <div class="actions">
-        <a href="#contact" class="btn"><span lang="zh">預約 30 分鐘諮詢</span><span lang="en">Book a 30‑min call</span></a>
-        <a href="#offers" class="link"><span lang="zh">看服務與交付物</span><span lang="en">Services and deliverables</span></a>
+      <!-- invisible journeys the task tokens travel along -->
+      <defs>
+        <path id="j1" d="M140,62 C210,62 230,140 300,140 L460,140 C510,140 530,90 580,90 L720,90 L820,90"/>
+        <path id="j2" d="M140,140 L300,140 L460,140 C510,140 530,190 580,190 L720,190 L820,190"/>
+        <path id="j3" d="M140,218 C210,218 230,140 300,140 L460,140 C510,140 530,90 580,90 L720,90 L820,90"/>
+      </defs>
+
+      <!-- edges, drawn in sequence -->
+      <g class="edges" fill="none">
+        <path class="edge e1" pathLength="100" d="M140,62 C210,62 230,140 300,140"/>
+        <path class="edge e1" pathLength="100" d="M140,140 L300,140"/>
+        <path class="edge e1" pathLength="100" d="M140,218 C210,218 230,140 300,140"/>
+        <path class="edge e2" pathLength="100" d="M460,140 C510,140 530,90 580,90"/>
+        <path class="edge e2" pathLength="100" d="M460,140 C510,140 530,190 580,190"/>
+        <path class="edge e3" pathLength="100" d="M720,90 L820,90"/>
+        <path class="edge e3" pathLength="100" d="M720,190 L820,190"/>
+      </g>
+
+      <!-- stage 1: inputs -->
+      <g class="node s1">
+        <rect x="20" y="40" width="120" height="44" rx="12"/>
+        <text class="n-label" x="80" y="62" lang="zh">表單送出</text><text class="n-label" x="80" y="62" lang="en">Form filed</text>
+      </g>
+      <g class="node s1">
+        <rect x="20" y="118" width="120" height="44" rx="12"/>
+        <text class="n-label" x="80" y="140" lang="zh">收到 Email</text><text class="n-label" x="80" y="140" lang="en">Email in</text>
+      </g>
+      <g class="node s1">
+        <rect x="20" y="196" width="120" height="44" rx="12"/>
+        <text class="n-label" x="80" y="218" lang="zh">CRM 更新</text><text class="n-label" x="80" y="218" lang="en">CRM update</text>
+      </g>
+
+      <!-- stage 2: the automation -->
+      <g class="node hub s2">
+        <rect x="300" y="108" width="160" height="64" rx="16"/>
+        <text class="n-label" x="380" y="133" lang="zh">自動化流程</text><text class="n-label" x="380" y="133" lang="en">Automation</text>
+        <text class="n-sub" x="380" y="154" lang="zh">Power Automate · Python</text><text class="n-sub" x="380" y="154" lang="en">Power Automate · Python</text>
+      </g>
+
+      <!-- stage 3: branches -->
+      <g class="node s3">
+        <rect x="580" y="68" width="140" height="44" rx="12"/>
+        <text class="n-label" x="650" y="90" lang="zh">規則驗證</text><text class="n-label" x="650" y="90" lang="en">Rules check</text>
+      </g>
+      <g class="node s3">
+        <rect x="580" y="168" width="140" height="44" rx="12"/>
+        <text class="n-label" x="650" y="190" lang="zh">AI 判讀</text><text class="n-label" x="650" y="190" lang="en">AI reads it</text>
+      </g>
+
+      <!-- stage 4: outputs -->
+      <g class="node out s4">
+        <rect x="820" y="68" width="120" height="44" rx="12"/>
+        <text class="n-label" x="880" y="90" lang="zh">寫入 ERP</text><text class="n-label" x="880" y="90" lang="en">Into ERP</text>
+      </g>
+      <g class="node out s4">
+        <rect x="820" y="168" width="120" height="44" rx="12"/>
+        <text class="n-label" x="880" y="190" lang="zh">儀表板</text><text class="n-label" x="880" y="190" lang="en">Dashboard</text>
+      </g>
+
+      <!-- column captions -->
+      <text class="n-cap" x="80" y="275" lang="zh">INPUT</text><text class="n-cap" x="80" y="275" lang="en">INPUT</text>
+      <text class="n-cap" x="880" y="275" lang="zh">OUTPUT</text><text class="n-cap" x="880" y="275" lang="en">OUTPUT</text>
+
+      <!-- tasks streaming through -->
+      <g class="tokens">
+        <circle class="tok" r="5" opacity="0"><set attributeName="opacity" to="1" begin="2.4s"/><animateMotion dur="4.4s" begin="2.4s" repeatCount="indefinite"><mpath href="#j1"/></animateMotion></circle>
+        <circle class="tok" r="5" opacity="0"><set attributeName="opacity" to="1" begin="3.9s"/><animateMotion dur="4.4s" begin="3.9s" repeatCount="indefinite"><mpath href="#j1"/></animateMotion></circle>
+        <circle class="tok" r="5" opacity="0"><set attributeName="opacity" to="1" begin="2.9s"/><animateMotion dur="4.4s" begin="2.9s" repeatCount="indefinite"><mpath href="#j2"/></animateMotion></circle>
+        <circle class="tok" r="5" opacity="0"><set attributeName="opacity" to="1" begin="4.6s"/><animateMotion dur="4.4s" begin="4.6s" repeatCount="indefinite"><mpath href="#j2"/></animateMotion></circle>
+        <circle class="tok" r="5" opacity="0"><set attributeName="opacity" to="1" begin="3.4s"/><animateMotion dur="4.4s" begin="3.4s" repeatCount="indefinite"><mpath href="#j3"/></animateMotion></circle>
+        <circle class="tok" r="5" opacity="0"><set attributeName="opacity" to="1" begin="5.3s"/><animateMotion dur="4.4s" begin="5.3s" repeatCount="indefinite"><mpath href="#j3"/></animateMotion></circle>
+      </g>
+    </svg>
+  </div>
+
+  <div class="hero-copy">
+    <h1 class="headline-super">
+      <span lang="zh">讓流程自己跑。</span>
+      <span lang="en">Let the work run itself.</span>
+    </h1>
+    <p class="subhead subhead-dark">
+      <span lang="zh">流程與數據自動化、AI Agent 建置、AI 商業落地。</span>
+      <span lang="en">Process &amp; data automation, AI agents, and AI that actually ships.</span>
+    </p>
+    <div class="cta-row cta-hero">
+      <a href="#contact" class="button"><span lang="zh">預約 30 分鐘諮詢</span><span lang="en">Book a 30‑min call</span></a>
+    </div>
+    <div class="cta-row">
+      <a href="#services" class="link-cta"><span lang="zh">看服務內容</span><span lang="en">See services</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── About ───────── -->
+<section class="about-section" id="about">
+  <div class="about-inner">
+    <img class="about-photo" src="assets/img/Official_Profile_2.jpg" alt="Louis Blanc (Yenchi)" loading="lazy">
+    <div class="about-copy">
+      <h2 class="section-title"><span lang="zh">關於我</span><span lang="en">About</span></h2>
+      <p class="about-lead"><span lang="zh">我是 Louis Blanc（Yenchi）。財務與資訊科技出身，後來專攻人工智慧。過去六年在金融、製造與 AI 公司之間，做的事情只有一件：把人手工做的流程變成系統自己跑，然後用數據證明它有效。</span><span lang="en">I'm Louis Blanc (Yenchi). Finance and IT by training, AI by specialisation. For six years across finance, manufacturing and AI companies I've done one thing: turn manual processes into systems that run themselves, then prove it with data.</span></p>
+      <div class="about-cols">
+        <div>
+          <h4><span lang="zh">學歷</span><span lang="en">Education</span></h4>
+          <ul>
+            <li><img src="assets/img/UoW_logo.png" alt="" loading="lazy">Post‑Degree in Artificial Intelligence, University of Winnipeg</li>
+            <li><img src="assets/img/msu_logo2.png" alt="" loading="lazy">B.A. Information Technology, Michigan State University</li>
+            <li><img src="assets/img/msu_logo2.png" alt="" loading="lazy">B.A. Finance, Michigan State University</li>
+          </ul>
+        </div>
+        <div>
+          <h4><span lang="zh">證照</span><span lang="en">Certifications</span></h4>
+          <ul>
+            <li><img src="assets/img/ibm_logo.png" alt="" loading="lazy">IBM Data Science Professional Certificate</li>
+            <li><img src="assets/img/snowflake_logo.png" alt="" loading="lazy">Snowflake Warehousing Certificate</li>
+            <li><img src="assets/img/google_logo.png" alt="" loading="lazy">Google Cybersecurity Certificate</li>
+            <li><img src="assets/img/bloomberg_logo.png" alt="" loading="lazy">Bloomberg Terminal Certificate</li>
+          </ul>
+        </div>
       </div>
-
-      <!-- three facts, not a biography -->
-      <dl class="facts">
-        <div>
-          <dt><span lang="zh">最大單筆成效</span><span lang="en">Largest single result</span></dt>
-          <dd><span class="facts-fig">80,000</span><span lang="zh">每日系統請求量的減少，零資料遺失</span><span lang="en">fewer system requests per day, zero data loss</span></dd>
-        </div>
-        <div>
-          <dt><span lang="zh">實作年資</span><span lang="en">Doing this since</span></dt>
-          <dd><span class="facts-fig">2020</span><span lang="zh">金融、製造與 AI 產業的內部系統</span><span lang="en">internal systems in finance, manufacturing and AI</span></dd>
-        </div>
-        <div>
-          <dt><span lang="zh">交付語言</span><span lang="en">Delivered in</span></dt>
-          <dd><span class="facts-fig"><span lang="zh">中 / 英</span><span lang="en">EN / 中文</span></span><span lang="zh">文件、訓練與交接都提供兩種語言</span><span lang="en">docs, training and handover in both</span></dd>
-        </div>
-      </dl>
+      <p class="about-langs"><span lang="zh">語言：中文、英文</span><span lang="en">Languages: Mandarin, English</span></p>
     </div>
   </div>
 </section>
 
-<!-- ───────── Symptoms ───────── -->
-<section id="symptoms">
-  <div class="doc">
-    <div class="terms">
-      <dl>
-        <dt><span lang="zh">怎麼用這一段</span><span lang="en">How to use this</span></dt>
-        <dd><span lang="zh">認得其中兩項以上，通常就值得談一次。</span><span lang="en">If two or more of these are familiar, a call is usually worth it.</span></dd>
-      </dl>
+<!-- ───────── Featured result (light hero) ───────── -->
+<section class="hero hero-light" id="featured">
+  <div class="hero-copy">
+    <p class="eyebrow-small"><span lang="zh">案例精選</span><span lang="en">Featured result</span></p>
+    <h2 class="headline-hero">
+      <span lang="zh">每天 80,000 次請求，<br class="br-desktop">一次消失。</span>
+      <span lang="en">80,000 requests a day.<br>Gone.</span>
+    </h2>
+    <p class="subhead subhead-dark">
+      <span lang="zh">在 Freedom Concepts 整併 Power Automate 邏輯並加入內部過濾，Dataverse 每日請求量減少超過 80,000 次，零資料遺失。</span>
+      <span lang="en">At Freedom Concepts I consolidated Power Automate logic and added internal filtering.<br class="br-desktop">Dataverse request volume dropped by over 80,000 per day, with zero data loss.</span>
+    </p>
+    <div class="cta-row">
+      <a href="#results" class="link-cta"><span lang="zh">更多成果</span><span lang="en">More results</span></a>
+      <a href="#process" class="link-cta"><span lang="zh">怎麼合作</span><span lang="en">How we'd work</span></a>
     </div>
+  </div>
+  <div class="stat-strip" aria-hidden="true">
+    <div class="stat-bar">
+      <div class="bar bar-before"><span>Before</span></div>
+      <div class="bar bar-after"><span>After</span></div>
+    </div>
+  </div>
+</section>
 
-    <div>
-      <p class="index">01</p>
-      <h2 class="h-section"><span lang="zh">這些情況你認得嗎？</span><span lang="en">Does any of this sound familiar?</span></h2>
+<!-- ───────── Services tiles ───────── -->
+<section class="tiles" id="services">
+  <h2 class="visually-hidden">Services</h2>
 
-      <ul class="symptoms">
-        <li><span lang="zh">每個月有人花兩三天，把幾個系統的數字抄進同一份報表。</span><span lang="en">Every month, someone spends two or three days copying numbers out of several systems into one report.</span></li>
-        <li><span lang="zh">兩套系統各有一份客戶資料，對不起來，也沒人確定哪一份是對的。</span><span lang="en">Two systems hold two versions of the customer list, they don't reconcile, and nobody is sure which one is right.</span></li>
-        <li><span lang="zh">信件和表單要有人先讀過，才知道該轉給誰、該不該急。</span><span lang="en">Emails and form submissions have to be read by a person before anyone knows who they go to or how urgent they are.</span></li>
-        <li><span lang="zh">某個流程只有一個人會跑，因為它只存在他的腦袋裡。</span><span lang="en">One process only one person can run, because it exists only in their head.</span></li>
-        <li><span lang="zh">系統請求量或授權費一直漲，但沒人知道是哪些流程在吃。</span><span lang="en">System request volume or licence costs keep climbing and nobody can say which flows are eating them.</span></li>
-        <li><span lang="zh">想用 AI，但不確定從哪個環節開始才會真的省到錢。</span><span lang="en">You want to use AI but aren't sure which step to start with so that it actually saves money.</span></li>
-      </ul>
-
-      <p class="body">
-        <span lang="zh">這些都不是「再努力一點」能解決的問題，它們是系統之間沒有接起來造成的。接起來之後，那些時間就回到你的團隊手上。</span>
-        <span lang="en">None of these are fixed by working harder. They happen because the systems aren't connected. Connect them and the hours go back to your team.</span>
+  <article class="tile tile-light">
+    <div class="tile-copy">
+      <h3 class="tile-headline"><span lang="zh">流程與數據自動化</span><span lang="en">Process &amp; Data Automation</span></h3>
+      <p class="tile-sub">
+        <span lang="zh">把每天重複的表單、報表、系統同步交給機器。</span>
+        <span lang="en">Hand the daily forms, reports and system syncs to a machine.</span>
       </p>
+      <div class="cta-row">
+        <a href="#contact" class="link-cta"><span lang="zh">討論需求</span><span lang="en">Discuss</span></a>
+      </div>
+    </div>
+    <div class="tile-art tile-art-flow" aria-hidden="true">
+      <div class="flow-row">
+        <div class="node">CRM</div><div class="edge"></div><div class="node node-accent">Automate</div><div class="edge"></div><div class="node">ERP</div>
+      </div>
+      <div class="edge edge-down"></div>
+      <div class="node node-wide">Power BI · Tableau</div>
+    </div>
+    <ul class="tile-bullets">
+      <li><span lang="zh">Power Automate / n8n / Make / Zapier 工作流</span><span lang="en">Power Automate / n8n / Make / Zapier workflows</span></li>
+      <li><span lang="zh">Python ETL、Airflow 排程、Kafka 事件管線</span><span lang="en">Python ETL, Airflow scheduling, Kafka event pipelines</span></li>
+      <li><span lang="zh">CRM / ERP / SharePoint / Dynamics 365 串接</span><span lang="en">CRM / ERP / SharePoint / Dynamics 365 integration</span></li>
+    </ul>
+  </article>
 
-      <figure class="figure">
-        <figcaption class="figure-head">
-          <span class="index figure-n"><span lang="zh">圖 1</span><span lang="en">Fig. 1</span></span>
-          <span class="h-sub"><span lang="zh">接起來之後，一筆記錄自己走完全程</span><span lang="en">Once connected, a record walks itself through</span></span>
-        </figcaption>
-        <div class="figure-body">
-          <svg class="flow" viewBox="0 0 960 300" role="img"
-               aria-label="A workflow map: forms, email and CRM records flow into an automation step, are validated or read by an AI agent, then written to the ERP and surfaced on a dashboard.">
-            <defs>
-              <path id="j1" d="M140,62 C210,62 230,140 300,140 L460,140 C510,140 530,90 580,90 L720,90 L820,90"/>
-              <path id="j2" d="M140,140 L300,140 L460,140 C510,140 530,190 580,190 L720,190 L820,190"/>
-              <path id="j3" d="M140,218 C210,218 230,140 300,140 L460,140 C510,140 530,90 580,90 L720,90 L820,90"/>
-            </defs>
-            <g class="edges" fill="none">
-              <path class="edge e1" pathLength="100" d="M140,62 C210,62 230,140 300,140"/>
-              <path class="edge e1" pathLength="100" d="M140,140 L300,140"/>
-              <path class="edge e1" pathLength="100" d="M140,218 C210,218 230,140 300,140"/>
-              <path class="edge e2" pathLength="100" d="M460,140 C510,140 530,90 580,90"/>
-              <path class="edge e2" pathLength="100" d="M460,140 C510,140 530,190 580,190"/>
-              <path class="edge e3" pathLength="100" d="M720,90 L820,90"/>
-              <path class="edge e3" pathLength="100" d="M720,190 L820,190"/>
-            </g>
-            <g class="node s1"><rect x="20" y="40" width="120" height="44"/>
-              <text class="n-label" x="80" y="62" lang="zh">表單送出</text><text class="n-label" x="80" y="62" lang="en">Form filed</text></g>
-            <g class="node s1"><rect x="20" y="118" width="120" height="44"/>
-              <text class="n-label" x="80" y="140" lang="zh">收到 Email</text><text class="n-label" x="80" y="140" lang="en">Email in</text></g>
-            <g class="node s1"><rect x="20" y="196" width="120" height="44"/>
-              <text class="n-label" x="80" y="218" lang="zh">CRM 更新</text><text class="n-label" x="80" y="218" lang="en">CRM update</text></g>
-            <g class="node hub s2"><rect x="300" y="108" width="160" height="64"/>
-              <text class="n-label" x="380" y="133" lang="zh">自動化流程</text><text class="n-label" x="380" y="133" lang="en">Automation</text>
-              <text class="n-sub" x="380" y="154" lang="zh">Power Automate · Python</text><text class="n-sub" x="380" y="154" lang="en">Power Automate · Python</text></g>
-            <g class="node s3"><rect x="580" y="68" width="140" height="44"/>
-              <text class="n-label" x="650" y="90" lang="zh">規則驗證</text><text class="n-label" x="650" y="90" lang="en">Rules check</text></g>
-            <g class="node s3"><rect x="580" y="168" width="140" height="44"/>
-              <text class="n-label" x="650" y="190" lang="zh">AI 判讀</text><text class="n-label" x="650" y="190" lang="en">AI reads it</text></g>
-            <g class="node out s4"><rect x="820" y="68" width="120" height="44"/>
-              <text class="n-label" x="880" y="90" lang="zh">寫入 ERP</text><text class="n-label" x="880" y="90" lang="en">Into ERP</text></g>
-            <g class="node out s4"><rect x="820" y="168" width="120" height="44"/>
-              <text class="n-label" x="880" y="190" lang="zh">儀表板</text><text class="n-label" x="880" y="190" lang="en">Dashboard</text></g>
-            <text class="n-cap" x="80" y="275" lang="zh">INPUT</text><text class="n-cap" x="80" y="275" lang="en">INPUT</text>
-            <text class="n-cap" x="880" y="275" lang="zh">OUTPUT</text><text class="n-cap" x="880" y="275" lang="en">OUTPUT</text>
-            <g class="tokens">
-              <circle class="tok" r="5" opacity="0"><set attributeName="opacity" to="1" begin="2.2s"/><animateMotion dur="4.4s" begin="2.2s" repeatCount="indefinite"><mpath href="#j1"/></animateMotion></circle>
-              <circle class="tok" r="5" opacity="0"><set attributeName="opacity" to="1" begin="3.7s"/><animateMotion dur="4.4s" begin="3.7s" repeatCount="indefinite"><mpath href="#j1"/></animateMotion></circle>
-              <circle class="tok" r="5" opacity="0"><set attributeName="opacity" to="1" begin="2.7s"/><animateMotion dur="4.4s" begin="2.7s" repeatCount="indefinite"><mpath href="#j2"/></animateMotion></circle>
-              <circle class="tok" r="5" opacity="0"><set attributeName="opacity" to="1" begin="4.4s"/><animateMotion dur="4.4s" begin="4.4s" repeatCount="indefinite"><mpath href="#j2"/></animateMotion></circle>
-              <circle class="tok" r="5" opacity="0"><set attributeName="opacity" to="1" begin="3.2s"/><animateMotion dur="4.4s" begin="3.2s" repeatCount="indefinite"><mpath href="#j3"/></animateMotion></circle>
-              <circle class="tok" r="5" opacity="0"><set attributeName="opacity" to="1" begin="5.1s"/><animateMotion dur="4.4s" begin="5.1s" repeatCount="indefinite"><mpath href="#j3"/></animateMotion></circle>
-            </g>
-          </svg>
-        </div>
-        <p class="figure-note">
-          <span lang="zh">示意圖，說明工作的形狀，非任一客戶系統的擷取畫面。</span>
-          <span lang="en">A schematic of the shape of the work. Not a capture of any client system.</span>
+  <article class="tile tile-dark">
+    <div class="tile-copy">
+      <h3 class="tile-headline"><span lang="zh">AI Agent 建置</span><span lang="en">AI Agent Setup</span></h3>
+      <p class="tile-sub">
+        <span lang="zh">不只是聊天機器人。能讀資料、會用工具、有人審核的 Agent。</span>
+        <span lang="en">Not a chatbot. Agents that read your data, use your tools, and stay supervised.</span>
+      </p>
+      <div class="cta-row">
+        <a href="#contact" class="link-cta"><span lang="zh">討論需求</span><span lang="en">Discuss</span></a>
+      </div>
+    </div>
+    <div class="tile-art tile-art-loop">
+      <svg class="loop" viewBox="0 0 800 190" role="img"
+           aria-label="How an agent runs: a question comes in, the agent reads your data and calls your systems, a human approves the steps you choose, then it answers and logs what it did.">
+        <g class="edges" fill="none">
+          <path class="l-edge" d="M156,95 L216,95"/>
+          <path class="l-edge" d="M464,95 L524,95"/>
+          <path class="l-edge" d="M676,95 L736,95"/>
+        </g>
+
+        <g class="l-node">
+          <rect x="16" y="71" width="140" height="48" rx="12"/>
+          <text class="l-label" x="86" y="95" lang="zh">問題進來</text><text class="l-label" x="86" y="95" lang="en">A question</text>
+        </g>
+
+        <g class="l-node l-core">
+          <rect x="216" y="34" width="248" height="122" rx="18"/>
+          <text class="l-title" x="340" y="60" lang="zh">Agent</text><text class="l-title" x="340" y="60" lang="en">Agent</text>
+          <rect class="l-chip" x="238" y="80" width="204" height="30" rx="9"/>
+          <text class="l-chip-t" x="340" y="95" lang="zh">讀取你的資料</text><text class="l-chip-t" x="340" y="95" lang="en">Reads your data</text>
+          <rect class="l-chip" x="238" y="116" width="204" height="30" rx="9"/>
+          <text class="l-chip-t" x="340" y="131" lang="zh">呼叫你的系統</text><text class="l-chip-t" x="340" y="131" lang="en">Calls your systems</text>
+        </g>
+
+        <g class="l-node l-gate">
+          <rect x="524" y="71" width="152" height="48" rx="12"/>
+          <text class="l-label" x="600" y="95" lang="zh">人工審核</text><text class="l-label" x="600" y="95" lang="en">You approve</text>
+        </g>
+
+        <g class="l-node">
+          <rect x="736" y="71" width="48" height="48" rx="12"/>
+          <path class="l-tick" d="M750,95 l8,9 l16,-19" fill="none"/>
+        </g>
+
+        <text class="l-cap" x="86" y="168" lang="zh">輸入</text><text class="l-cap" x="86" y="168" lang="en">In</text>
+        <text class="l-cap" x="600" y="168" lang="zh">你決定哪幾步要人看</text><text class="l-cap" x="600" y="168" lang="en">You choose which steps need a human</text>
+      </svg>
+    </div>
+    <ul class="tile-bullets">
+      <li><span lang="zh">Claude / OpenAI / 開源模型，依成本與資料敏感度選型</span><span lang="en">Claude / OpenAI / open models, chosen by cost and data sensitivity</span></li>
+      <li><span lang="zh">RAG 知識庫、MCP 工具串接、人工審核節點</span><span lang="en">RAG knowledge bases, MCP tool integration, human‑in‑the‑loop</span></li>
+      <li><span lang="zh">客服、內部問答、報表產生、資料擷取 Agent</span><span lang="en">Support, internal Q&amp;A, reporting and data‑extraction agents</span></li>
+    </ul>
+  </article>
+
+  <div class="tile-grid">
+    <article class="tile tile-light tile-half">
+      <div class="tile-copy">
+        <h3 class="tile-headline"><span lang="zh">AI 商業落地</span><span lang="en">AI Business Integration</span></h3>
+        <p class="tile-sub">
+          <span lang="zh">從「想用 AI」到「AI 在賺錢」。找對場景、算清 ROI、做到上線。</span>
+          <span lang="en">From "we should use AI" to AI that pays for itself. Right use case, clear ROI, shipped.</span>
         </p>
-      </figure>
-    </div>
+        <div class="cta-row">
+          <a href="#process" class="link-cta"><span lang="zh">了解流程</span><span lang="en">Learn more</span></a>
+        </div>
+      </div>
+      <div class="tile-art tile-art-steps">
+        <svg class="steps-viz" viewBox="0 0 460 96" role="img"
+             aria-label="The order of the work: use-case audit, then a proof of concept, then production, then payback.">
+          <line class="sv-rail" x1="30" y1="34" x2="430" y2="34"/>
+          <circle class="sv-dot" cx="30"  cy="34" r="7"/>
+          <circle class="sv-dot" cx="163" cy="34" r="7"/>
+          <circle class="sv-dot" cx="296" cy="34" r="7"/>
+          <circle class="sv-dot sv-dot-end" cx="430" cy="34" r="9"/>
+          <text class="sv-t" x="30" y="66" lang="zh">場景盤點</text><text class="sv-t" x="30" y="66" lang="en">Audit</text>
+          <text class="sv-t" x="163" y="66" lang="zh">POC</text><text class="sv-t" x="163" y="66" lang="en">POC</text>
+          <text class="sv-t" x="296" y="66" lang="zh">上線</text><text class="sv-t" x="296" y="66" lang="en">Production</text>
+          <text class="sv-t" x="430" y="66" lang="zh">回收</text><text class="sv-t" x="430" y="66" lang="en">Payback</text>
+        </svg>
+      </div>
+    </article>
+
+    <article class="tile tile-gray tile-half">
+      <div class="tile-copy">
+        <h3 class="tile-headline"><span lang="zh">數據儀表板</span><span lang="en">Dashboards &amp; BI</span></h3>
+        <p class="tile-sub">
+          <span lang="zh">老闆想看的數字，一頁看完。Power BI、Tableau、Dynamics 365。</span>
+          <span lang="en">The numbers leadership actually wants, on one page. Power BI, Tableau, Dynamics 365.</span>
+        </p>
+        <div class="cta-row">
+          <a href="#experience" class="link-cta"><span lang="zh">看經歷</span><span lang="en">See experience</span></a>
+        </div>
+      </div>
+      <div class="tile-art tile-art-dash" aria-hidden="true">
+        <img src="assets/img/dashboard2.png" alt="" loading="lazy">
+      </div>
+    </article>
   </div>
 </section>
 
-<!-- ───────── Offers ───────── -->
-<section id="offers">
-  <div class="doc">
-    <div class="terms">
-      <dl>
-        <dt><span lang="zh">承接方式</span><span lang="en">Scope</span></dt>
-        <dd><span lang="zh">四項，可單獨承接或組合。</span><span lang="en">Four, taken singly or together.</span></dd>
-        <dt><span lang="zh">計價</span><span lang="en">Pricing</span></dt>
-        <dd><span lang="zh">專案制或時數制，依範圍討論。</span><span lang="en">Per project or per hour, by scope.</span></dd>
-      </dl>
-      <p class="terms-note">
-        <span lang="zh">不強迫換系統。先讓你現有的系統彼此說話。</span>
-        <span lang="en">No forced migrations. First we make your existing systems talk to each other.</span>
-      </p>
-    </div>
-
-    <div>
-      <p class="index">02</p>
-      <h2 class="h-section"><span lang="zh">你會拿到什麼</span><span lang="en">What you get</span></h2>
-
-      <article class="offer">
-        <h3 class="h-sub"><span lang="zh">流程與數據自動化</span><span lang="en">Process &amp; Data Automation</span></h3>
-        <p class="body"><span lang="zh">把每天重複的表單、報表、系統同步交給機器。人只處理例外。</span><span lang="en">Hand the daily forms, reports and system syncs to a machine. People handle the exceptions only.</span></p>
-        <dl class="offer-spec">
-          <div>
-            <dt><span lang="zh">交付物</span><span lang="en">You receive</span></dt>
-            <dd><span lang="zh">可運作的自動化流程、操作手冊、監控與告警設定</span><span lang="en">Working automations, a runbook, monitoring and alerts</span></dd>
-          </div>
-          <div>
-            <dt><span lang="zh">典型範圍</span><span lang="en">Typical scope</span></dt>
-            <dd><span lang="zh">一到三條主要流程</span><span lang="en">One to three core flows</span></dd>
-          </div>
-          <div>
-            <dt><span lang="zh">用到的工具</span><span lang="en">Built with</span></dt>
-            <dd>Power Automate · n8n · Make · Zapier · Python ETL · Airflow · Kafka</dd>
-          </div>
-        </dl>
+<!-- ───────── Results gallery ───────── -->
+<section class="gallery-section" id="results">
+  <div class="section-head">
+    <h2 class="section-title"><span lang="zh">數字會說話。</span><span lang="en">Results that show up in the numbers.</span></h2>
+  </div>
+  <div class="gallery" tabindex="0" aria-label="Results">
+    <div class="gallery-track">
+      <article class="gcard gcard-blue">
+        <p class="gcard-kicker">Freedom Concepts · Power Automate</p>
+        <svg class="gcard-viz" viewBox="0 0 140 60" role="img" aria-label="Daily Dataverse requests before and after">
+          <text x="0" y="9" font-size="8" fill="rgba(255,255,255,.72)">before</text>
+          <rect x="0" y="14" width="140" height="12" rx="6" fill="rgba(255,255,255,.32)"/>
+          <text x="0" y="43" font-size="8" fill="rgba(255,255,255,.72)">after</text>
+          <rect x="0" y="48" width="26" height="12" rx="6" fill="#fff"/>
+        </svg>
+        <p class="gcard-number">80,000<span>+</span></p>
+        <p class="gcard-text"><span lang="zh">每日 Dataverse 請求量減少，零資料遺失。</span><span lang="en">Fewer Dataverse requests per day, zero data loss.</span></p>
       </article>
-
-      <article class="offer">
-        <h3 class="h-sub"><span lang="zh">AI Agent 建置</span><span lang="en">AI Agent Setup</span></h3>
-        <p class="body"><span lang="zh">不只是聊天機器人。能讀你的資料、會用你的系統、而且哪幾步要人審核由你決定。</span><span lang="en">Not a chatbot. It reads your data, uses your systems, and you decide which steps need a human.</span></p>
-
-        <figure class="figure">
-          <figcaption class="figure-head">
-            <span class="index figure-n"><span lang="zh">圖 2</span><span lang="en">Fig. 2</span></span>
-            <span class="h-sub"><span lang="zh">一個 Agent 實際怎麼跑</span><span lang="en">How an agent actually runs</span></span>
-          </figcaption>
-          <div class="plate">
-            <div class="figure-body">
-              <svg class="loop" viewBox="0 0 800 190" role="img"
-                   aria-label="How an agent runs: a question comes in, the agent reads your data and calls your systems, a human approves the steps you choose, then it answers and logs what it did.">
-                <g class="edges" fill="none">
-                  <path class="l-edge" d="M156,95 L216,95"/>
-                  <path class="l-edge" d="M464,95 L524,95"/>
-                  <path class="l-edge" d="M676,95 L736,95"/>
-                </g>
-                <g class="l-node"><rect x="16" y="71" width="140" height="48"/>
-                  <text class="l-label" x="86" y="95" lang="zh">問題進來</text><text class="l-label" x="86" y="95" lang="en">A question</text></g>
-                <g class="l-node l-core"><rect x="216" y="34" width="248" height="122"/>
-                  <text class="l-title" x="340" y="60" lang="zh">AGENT</text><text class="l-title" x="340" y="60" lang="en">AGENT</text>
-                  <rect class="l-chip" x="238" y="80" width="204" height="30" rx="2"/>
-                  <text class="l-chip-t" x="340" y="95" lang="zh">讀取你的資料</text><text class="l-chip-t" x="340" y="95" lang="en">Reads your data</text>
-                  <rect class="l-chip" x="238" y="116" width="204" height="30" rx="2"/>
-                  <text class="l-chip-t" x="340" y="131" lang="zh">呼叫你的系統</text><text class="l-chip-t" x="340" y="131" lang="en">Calls your systems</text></g>
-                <g class="l-node l-gate"><rect x="524" y="71" width="152" height="48"/>
-                  <text class="l-label" x="600" y="95" lang="zh">人工審核</text><text class="l-label" x="600" y="95" lang="en">You approve</text></g>
-                <g class="l-node"><rect x="736" y="71" width="48" height="48"/>
-                  <path class="l-tick" d="M750,95 l8,9 l16,-19" fill="none"/></g>
-                <text class="l-cap" x="86" y="168" lang="zh">輸入</text><text class="l-cap" x="86" y="168" lang="en">In</text>
-                <text class="l-cap" x="600" y="168" lang="zh">你決定哪幾步要人看</text><text class="l-cap" x="600" y="168" lang="en">You choose which steps need a human</text>
-              </svg>
-            </div>
-            <p class="figure-note">
-              <span lang="zh">虛線的那一步是可以擋下來的。範圍由你定。</span>
-              <span lang="en">The dashed step is the one that can be held. You set its scope.</span>
-            </p>
-          </div>
-        </figure>
-
-        <dl class="offer-spec">
-          <div>
-            <dt><span lang="zh">交付物</span><span lang="en">You receive</span></dt>
-            <dd><span lang="zh">可上線的 agent、知識庫、人工審核節點、使用紀錄</span><span lang="en">A production agent, its knowledge base, the approval gates and an audit log</span></dd>
-          </div>
-          <div>
-            <dt><span lang="zh">常見用途</span><span lang="en">Common uses</span></dt>
-            <dd><span lang="zh">客服分流、內部問答、報表產生、單據資料擷取</span><span lang="en">Support triage, internal Q&amp;A, report generation, extracting data from documents</span></dd>
-          </div>
-          <div>
-            <dt><span lang="zh">選型依據</span><span lang="en">Model choice</span></dt>
-            <dd><span lang="zh">Claude / OpenAI / 開源模型，依成本與資料敏感度決定</span><span lang="en">Claude / OpenAI / open models, decided by cost and data sensitivity</span></dd>
-          </div>
-        </dl>
+      <article class="gcard gcard-green">
+        <p class="gcard-kicker">Grand River · Algo trading</p>
+        <svg class="gcard-viz" viewBox="0 0 140 60" role="img" aria-label="Portfolio return trending up about 17 percent">
+          <polyline points="2,52 26,45 50,47 74,32 98,26 128,8" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="128" cy="8" r="4.5" fill="#fff"/>
+          <line x1="0" y1="58" x2="140" y2="58" stroke="rgba(255,255,255,.3)" stroke-width="1"/>
+        </svg>
+        <p class="gcard-number">17<span>%</span></p>
+        <p class="gcard-text"><span lang="zh">演算法交易策略帶來的報酬提升，並改善風險調整指標。</span><span lang="en">Return uplift from algorithmic strategies, with better risk‑adjusted metrics.</span></p>
       </article>
-
-      <article class="offer">
-        <h3 class="h-sub"><span lang="zh">AI 商業落地</span><span lang="en">AI Business Integration</span></h3>
-        <p class="body"><span lang="zh">從「想用 AI」到「AI 在賺錢」。先盤點哪個環節值得做，算清楚回收，再做到上線。</span><span lang="en">From "we should use AI" to AI that pays for itself. Work out which step is worth doing, cost the payback, then ship it.</span></p>
-        <dl class="offer-spec">
-          <div>
-            <dt><span lang="zh">交付物</span><span lang="en">You receive</span></dt>
-            <dd><span lang="zh">場景盤點報告、優先順序與預估回收、POC、上線版本</span><span lang="en">A use-case audit, a ranked list with estimated payback, a POC, then the production version</span></dd>
-          </div>
-          <div>
-            <dt><span lang="zh">推進方式</span><span lang="en">Sequence</span></dt>
-            <dd><span lang="zh">盤點 → POC → 上線 → 回收，每階段有中止點</span><span lang="en">Audit → POC → production → payback, with a stop point at each stage</span></dd>
-          </div>
-        </dl>
+      <article class="gcard gcard-purple">
+        <p class="gcard-kicker">Outlier · AI QA</p>
+        <svg class="gcard-viz" viewBox="0 0 140 60" role="img" aria-label="Automated test pass rate improving to 23 percent higher accuracy">
+          <rect x="2" y="34" width="18" height="22" rx="3" fill="rgba(255,255,255,.32)"/>
+          <rect x="26" y="28" width="18" height="28" rx="3" fill="rgba(255,255,255,.32)"/>
+          <rect x="50" y="30" width="18" height="26" rx="3" fill="rgba(255,255,255,.32)"/>
+          <rect x="74" y="18" width="18" height="38" rx="3" fill="#fff"/>
+          <rect x="98" y="10" width="18" height="46" rx="3" fill="#fff"/>
+          <rect x="122" y="4" width="16" height="52" rx="3" fill="#fff"/>
+        </svg>
+        <p class="gcard-number">23<span>%</span></p>
+        <p class="gcard-text"><span lang="zh">自動化測試框架讓客戶系統準確度提升。</span><span lang="en">Client system accuracy improved through automated test frameworks.</span></p>
       </article>
-
-      <article class="offer">
-        <h3 class="h-sub"><span lang="zh">數據儀表板</span><span lang="en">Dashboards &amp; BI</span></h3>
-        <p class="body"><span lang="zh">決策要看的數字，一頁看完，而且數字是自動更新的。</span><span lang="en">The numbers a decision needs, on one page, updating themselves.</span></p>
-        <dl class="offer-spec">
-          <div>
-            <dt><span lang="zh">交付物</span><span lang="en">You receive</span></dt>
-            <dd><span lang="zh">儀表板、背後的資料管線、欄位定義與交接說明</span><span lang="en">The dashboard, the pipeline behind it, field definitions and handover notes</span></dd>
-          </div>
-          <div>
-            <dt><span lang="zh">用到的工具</span><span lang="en">Built with</span></dt>
-            <dd>Power BI · Tableau · Dynamics 365 · SQL · Snowflake</dd>
-          </div>
-        </dl>
-        <img class="dash-shot" src="assets/img/dashboard2.png" alt="" loading="lazy">
+      <article class="gcard gcard-dark">
+        <p class="gcard-kicker">POWER AI · UWinnipeg PACE</p>
+        <svg class="gcard-viz" viewBox="0 0 140 60" role="img" aria-label="Agent routing a question to three data tools">
+          <line x1="26" y1="30" x2="70" y2="12" stroke="rgba(255,255,255,.45)" stroke-width="1.5"/>
+          <line x1="26" y1="30" x2="70" y2="30" stroke="rgba(255,255,255,.45)" stroke-width="1.5"/>
+          <line x1="26" y1="30" x2="70" y2="48" stroke="rgba(255,255,255,.45)" stroke-width="1.5"/>
+          <circle cx="18" cy="30" r="9" fill="#fff"/>
+          <circle cx="80" cy="12" r="6" fill="rgba(255,255,255,.55)"/>
+          <circle cx="80" cy="30" r="6" fill="rgba(255,255,255,.55)"/>
+          <circle cx="80" cy="48" r="6" fill="rgba(255,255,255,.55)"/>
+          <text x="94" y="15" font-size="8" fill="rgba(255,255,255,.8)">search</text>
+          <text x="94" y="33" font-size="8" fill="rgba(255,255,255,.8)">compare</text>
+          <text x="94" y="51" font-size="8" fill="rgba(255,255,255,.8)">chat</text>
+        </svg>
+        <p class="gcard-number gcard-number-sm">NLP<span> + ML</span></p>
+        <p class="gcard-text"><span lang="zh">整合比價工具與對話式助理的線上購物助手。</span><span lang="en">Online shopping assistant combining comparison tools with a conversational agent.</span></p>
       </article>
     </div>
   </div>
-</section>
-
-<!-- ───────── Results ───────── -->
-<section id="results">
-  <div class="doc">
-    <div class="terms">
-      <dl>
-        <dt><span lang="zh">來源</span><span lang="en">Source</span></dt>
-        <dd><span lang="zh">任職期間的內部量測。</span><span lang="en">Measured internally, on the job.</span></dd>
-      </dl>
-      <p class="terms-note">
-        <span lang="zh">這些數字沒有經過第三方稽核。沒有可公開分母的，這裡就留一個破折號，不補一個看起來漂亮的數字。</span>
-        <span lang="en">None of these are third-party audited. Where there is no denominator I can publish, the row prints an em dash rather than a number that would look better.</span>
-      </p>
-    </div>
-
-    <div>
-      <p class="index">03</p>
-      <h2 class="h-section"><span lang="zh">做過的，連同它的基準。</span><span lang="en">What it has been worth, with the basis.</span></h2>
-
-      <table class="ledger">
-        <thead>
-          <tr>
-            <th scope="col"><span lang="zh">數字</span><span lang="en">Figure</span></th>
-            <th scope="col"><span lang="zh">對業務的意義</span><span lang="en">What it meant</span></th>
-            <th scope="col"><span lang="zh">基準</span><span lang="en">Basis</span></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="fig">80,000<span class="where">Freedom Concepts</span></td>
-            <td><span lang="zh">整併 Power Automate 邏輯後，Dataverse 每日請求量的減少數，零資料遺失。請求量直接對應授權成本與尖峰時段的系統穩定度。</span><span lang="en">Fewer Dataverse requests per day after consolidating Power Automate logic, with zero data loss. Request volume maps directly to licence cost and to how the system behaves at peak.</span></td>
-            <td class="basis"><span lang="zh">同一組流程，整併前後對比。</span><span lang="en">The same set of flows, before and after.</span></td>
-          </tr>
-          <tr>
-            <td class="fig">17%<span class="where">Grand River</span></td>
-            <td><span lang="zh">演算法交易策略帶來的報酬提升，並改善風險調整指標。交易流程以 Python 自動化，減少人工操作與出錯機會。</span><span lang="en">Return uplift from algorithmic strategies, with better risk‑adjusted metrics. The trading workflow was automated in Python, cutting manual steps and the errors that come with them.</span></td>
-            <td class="basis"><span lang="zh">策略實施前後的投組報酬，未經第三方稽核。</span><span lang="en">Portfolio return before and after the strategies. Not audited.</span></td>
-          </tr>
-          <tr>
-            <td class="fig">23%<span class="where">Outlier</span></td>
-            <td><span lang="zh">自動化測試框架讓客戶系統準確度提升。錯誤在上線前被攔下來，而不是由客戶回報。</span><span lang="en">Client system accuracy improved through automated test frameworks. Failures were caught before release instead of being reported by customers.</span></td>
-            <td class="basis"><span lang="zh">導入框架前後的系統準確度。</span><span lang="en">System accuracy before and after the framework.</span></td>
-          </tr>
-          <tr>
-            <td class="fig fig-none">—<span class="where">POWER AI · UWinnipeg PACE</span></td>
-            <td><span lang="zh">整合比價工具與對話式助理的線上購物助手。NLP、API 串接、資料庫與機器學習。</span><span lang="en">An online shopping assistant combining comparison tools with a conversational agent. NLP, API integration, database and machine learning.</span></td>
-            <td class="basis"><span lang="zh">學校專案，沒有營運數據可引用。</span><span lang="en">A university project. No operating figures to cite.</span></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+  <div class="gallery-controls" aria-hidden="true">
+    <button class="gallery-btn" data-scroll="-1">‹</button>
+    <button class="gallery-btn" data-scroll="1">›</button>
   </div>
 </section>
 
 <!-- ───────── Process ───────── -->
-<section id="process">
-  <div class="doc">
-    <div class="terms">
-      <dl>
-        <dt><span lang="zh">你要投入的</span><span lang="en">What you put in</span></dt>
-        <dd><span lang="zh">一位能回答業務問題的窗口，不必懂技術。每週一次約 30 分鐘。</span><span lang="en">One person who can answer questions about the business. No technical knowledge needed. About 30 minutes a week.</span></dd>
-        <dt><span lang="zh">維運</span><span lang="en">After handover</span></dt>
-        <dd><span lang="zh">目標是你的團隊自己接手，支援方式另議。</span><span lang="en">Your team should be able to run it. Support can be arranged separately.</span></dd>
-      </dl>
+<section class="process-section" id="process">
+  <div class="section-head">
+    <h2 class="section-title"><span lang="zh">四步，從問題到上線。</span><span lang="en">Four steps from problem to production.</span></h2>
+    <p class="section-sub"><span lang="zh">每一步都有明確交付物。你隨時知道錢花在哪裡。</span><span lang="en">Every step has a concrete deliverable. You always know where the money goes.</span></p>
+  </div>
+  <ol class="steps">
+    <li class="step">
+      <span class="step-num">01</span>
+      <h3><span lang="zh">診斷</span><span lang="en">Diagnose</span></h3>
+      <p><span lang="zh">30 分鐘免費諮詢 + 流程盤點。找出最花時間、最容易出錯的環節。</span><span lang="en">Free 30‑minute call plus a process audit. We find what eats the most time and breaks most often.</span></p>
+      <p class="step-deliv"><span lang="zh">交付：流程地圖、優先順序清單</span><span lang="en">Deliverable: process map, priority list</span></p>
+    </li>
+    <li class="step">
+      <span class="step-num">02</span>
+      <h3><span lang="zh">提案</span><span lang="en">Propose</span></h3>
+      <p><span lang="zh">範圍先講清楚，一起估算可能的回收。計價方式（專案制或時數制）可依需求討論。</span><span lang="en">We agree the scope first and estimate the payback together. How it's priced — per project or per hour — is something we work out to fit the job.</span></p>
+      <p class="step-deliv"><span lang="zh">交付：方案書、架構圖、時程與報價</span><span lang="en">Deliverable: proposal, architecture, timeline and quote</span></p>
+    </li>
+    <li class="step">
+      <span class="step-num">03</span>
+      <h3><span lang="zh">建置</span><span lang="en">Build</span></h3>
+      <p><span lang="zh">小步快跑，每週示範。先做能立刻省時間的部分。</span><span lang="en">Short iterations, weekly demos. We ship the time‑saving parts first.</span></p>
+      <p class="step-deliv"><span lang="zh">交付：可運作的系統、測試紀錄</span><span lang="en">Deliverable: working system, test log</span></p>
+    </li>
+    <li class="step">
+      <span class="step-num">04</span>
+      <h3><span lang="zh">交接與維運</span><span lang="en">Hand over &amp; maintain</span></h3>
+      <p><span lang="zh">文件、教育訓練、監控告警。目標是你的團隊能自己接手；後續維運與支援方式可以另外討論。</span><span lang="en">Docs, training, monitoring and alerts. The goal is that your team can run it themselves; ongoing support is something we can arrange separately if you want it.</span></p>
+      <p class="step-deliv"><span lang="zh">交付：操作手冊、教育訓練、交接說明</span><span lang="en">Deliverable: runbook, training, handover notes</span></p>
+    </li>
+  </ol>
+</section>
+
+<!-- ───────── Stack ───────── -->
+<section class="stack-section" id="stack">
+  <div class="section-head">
+    <h2 class="section-title"><span lang="zh">用你已經在用的工具。</span><span lang="en">Built on the tools you already use.</span></h2>
+    <p class="section-sub"><span lang="zh">不強迫換系統。先讓現有系統彼此說話。</span><span lang="en">No forced migrations. First we make your existing systems talk to each other.</span></p>
+  </div>
+  <div class="stack-grid">
+    <div class="stack-col">
+      <h4><span lang="zh">自動化</span><span lang="en">Automation</span></h4>
+      <ul><li>Microsoft Power Automate</li><li>n8n · Make · Zapier</li><li>Apache Airflow</li><li>Apache Kafka</li><li>Python ETL</li></ul>
     </div>
-
-    <div>
-      <p class="index">04</p>
-      <h2 class="h-section"><span lang="zh">四步，從問題到上線。</span><span lang="en">Four steps from problem to production.</span></h2>
-      <p class="lead"><span lang="zh">每一步都有明確交付物與中止點。你隨時知道錢花在哪裡，也隨時可以停。</span><span lang="en">Every step has a deliverable and a stop point. You always know where the money goes, and you can stop at any of them.</span></p>
-
-      <ol style="margin-top:var(--s5)">
-        <li class="step">
-          <div>
-            <p class="index">01</p>
-            <h3 class="h-sub"><span lang="zh">診斷</span><span lang="en">Diagnose</span></h3>
-            <p class="body"><span lang="zh">30 分鐘免費諮詢 + 流程盤點。找出最花時間、最容易出錯的環節，並估算各自值多少。</span><span lang="en">Free 30‑minute call plus a process audit. We find what eats the most time and breaks most often, and estimate what each is worth.</span></p>
-          </div>
-          <p class="step-deliv"><span lang="zh">交付：流程地圖、優先順序清單</span><span lang="en">Deliverable: process map, priority list</span></p>
-        </li>
-        <li class="step">
-          <div>
-            <p class="index">02</p>
-            <h3 class="h-sub"><span lang="zh">提案</span><span lang="en">Propose</span></h3>
-            <p class="body"><span lang="zh">範圍先講清楚，一起估算可能的回收。計價方式（專案制或時數制）可依需求討論。</span><span lang="en">We agree the scope first and estimate the payback together. How it's priced — per project or per hour — is something we work out to fit the job.</span></p>
-          </div>
-          <p class="step-deliv"><span lang="zh">交付：方案書、架構圖、時程與報價</span><span lang="en">Deliverable: proposal, architecture, timeline and quote</span></p>
-        </li>
-        <li class="step">
-          <div>
-            <p class="index">03</p>
-            <h3 class="h-sub"><span lang="zh">建置</span><span lang="en">Build</span></h3>
-            <p class="body"><span lang="zh">小步快跑，每週示範。先做能立刻省時間的部分，讓你在專案結束前就開始回收。</span><span lang="en">Short iterations, weekly demos. The time‑saving parts ship first, so the payback starts before the project ends.</span></p>
-          </div>
-          <p class="step-deliv"><span lang="zh">交付：可運作的系統、測試紀錄</span><span lang="en">Deliverable: working system, test log</span></p>
-        </li>
-        <li class="step">
-          <div>
-            <p class="index">04</p>
-            <h3 class="h-sub"><span lang="zh">交接與維運</span><span lang="en">Hand over &amp; maintain</span></h3>
-            <p class="body"><span lang="zh">文件、教育訓練、監控告警。目標是你的團隊能自己接手，不會變成非我不可；後續支援方式可以另外討論。</span><span lang="en">Docs, training, monitoring and alerts. The goal is that your team can run it without me; ongoing support is something we can arrange separately if you want it.</span></p>
-          </div>
-          <p class="step-deliv"><span lang="zh">交付：操作手冊、教育訓練、交接說明</span><span lang="en">Deliverable: runbook, training, handover notes</span></p>
-        </li>
-      </ol>
+    <div class="stack-col">
+      <h4>AI</h4>
+      <ul><li>Claude · OpenAI</li><li>RAG · Vector DB</li><li>MCP tool integration</li><li>Scikit‑Learn · Pandas · NumPy</li><li>NLP pipelines</li></ul>
+    </div>
+    <div class="stack-col">
+      <h4><span lang="zh">數據與雲端</span><span lang="en">Data &amp; Cloud</span></h4>
+      <ul><li>Snowflake</li><li>Google Cloud Platform</li><li>Apache Spark · Hadoop</li><li>SQL</li><li>Tableau · Power BI</li></ul>
+    </div>
+    <div class="stack-col">
+      <h4><span lang="zh">企業系統</span><span lang="en">Business Systems</span></h4>
+      <ul><li>Microsoft Dynamics 365</li><li>Dataverse · SharePoint</li><li>CRM · ERP</li><li>JIRA · Airtable · Slack</li><li>Bloomberg · TradingView</li></ul>
     </div>
   </div>
 </section>
 
-<!-- ───────── Fit ───────── -->
-<section id="fit">
-  <div class="doc">
-    <div class="terms">
-      <dl>
-        <dt><span lang="zh">為什麼列這個</span><span lang="en">Why this is here</span></dt>
-        <dd><span lang="zh">不合適的案子對雙方都是損失。與其做完才發現，不如先講。</span><span lang="en">A bad fit costs us both. Better said now than discovered halfway.</span></dd>
-      </dl>
-    </div>
-
-    <div>
-      <p class="index">05</p>
-      <h2 class="h-section"><span lang="zh">什麼情況適合找我</span><span lang="en">When this is a fit, and when it isn't</span></h2>
-
-      <div class="fit">
-        <div>
-          <h3 class="label"><span lang="zh">適合</span><span lang="en">A good fit</span></h3>
-          <ul class="fit-list fit-yes">
-            <li><span lang="zh">已經有 CRM、ERP、表單或試算表在跑，但它們彼此不說話。</span><span lang="en">You already run on a CRM, an ERP, forms or spreadsheets, and they don't talk to each other.</span></li>
-            <li><span lang="zh">有固定、重複、規則講得清楚的人工作業。</span><span lang="en">There is regular, repetitive work whose rules can be written down.</span></li>
-            <li><span lang="zh">有一位窗口能回答業務問題，不必懂技術。</span><span lang="en">One person can answer questions about the business. They don't need to be technical.</span></li>
-            <li><span lang="zh">你想要的是能交接的系統，不是長期綁定的顧問。</span><span lang="en">You want a system you can take over, not a consultant you stay tied to.</span></li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="label"><span lang="zh">不適合</span><span lang="en">Not a fit</span></h3>
-          <ul class="fit-list fit-no">
-            <li><span lang="zh">想一次把整間公司數位轉型。範圍太大，先從一條流程開始。</span><span lang="en">You want to transform the whole company at once. That's too broad — start with one flow.</span></li>
-            <li><span lang="zh">流程還在每週改，規則尚未定案。自動化會鎖住一個還在動的東西。</span><span lang="en">The process still changes weekly. Automating it would freeze something that is still moving.</span></li>
-            <li><span lang="zh">希望 AI 完全不需要人審核。做得到，但風險應該由你自己評估後決定，而不是預設。</span><span lang="en">You want AI with no human check at all. It can be built, but that should be your decision after weighing the risk, not the default.</span></li>
-            <li><span lang="zh">需要現場駐點。我是遠端工作。</span><span lang="en">You need someone on site. I work remotely.</span></li>
-          </ul>
-        </div>
-      </div>
-    </div>
+<!-- ───────── Experience ───────── -->
+<section class="exp-section" id="experience">
+  <div class="section-head">
+    <h2 class="section-title"><span lang="zh">經歷</span><span lang="en">Experience</span></h2>
   </div>
-</section>
-
-<!-- ───────── Who ───────── -->
-<section id="who">
-  <div class="doc">
-    <div class="terms">
-      <img class="portrait" src="assets/img/Official_Profile_2.jpg" alt="Louis Blanc (Yenchi)" loading="lazy">
-      <dl>
-        <dt><span lang="zh">學歷</span><span lang="en">Education</span></dt>
-        <dd><span lang="zh">人工智慧學士後學位，University of Winnipeg。資訊科技與財務雙學士，Michigan State University。</span><span lang="en">Post‑Degree in Artificial Intelligence, University of Winnipeg. B.A. Information Technology and B.A. Finance, Michigan State University.</span></dd>
-        <dt><span lang="zh">證照</span><span lang="en">Certifications</span></dt>
-        <dd>IBM Data Science · Snowflake Warehousing · Bloomberg Terminal</dd>
-      </dl>
-    </div>
-
-    <div>
-      <p class="index">06</p>
-      <h2 class="h-section"><span lang="zh">跟你合作的是誰</span><span lang="en">Who you'd be working with</span></h2>
-      <p class="lead">
-        <span lang="zh">我是 Louis Blanc（Yenchi）。財務與資訊科技出身，後來專攻人工智慧。2020 年起在金融、製造與 AI 公司做同一件事：把人手工做的流程變成系統自己跑，然後用數據證明它有效。以下是這些系統實際做了什麼。</span>
-        <span lang="en">I'm Louis Blanc (Yenchi). Finance and IT by training, AI by specialisation. Since 2020, across finance, manufacturing and AI companies, I've done one thing: turn manual processes into systems that run themselves, then prove it with data. Here is what those systems actually did.</span>
-      </p>
-
-      <div class="built">
-        <article class="role">
-          <div class="role-head">
-            <img class="role-logo" src="assets/img/freedom_concepts_inc__logo.png" alt="" loading="lazy">
-            <div>
-              <h3 class="h-sub"><span lang="zh">製造業 · 全公司數位系統</span><span lang="en">Manufacturer · company-wide digital systems</span></h3>
-              <p class="role-date">Freedom Concepts Inc. · Digital Solutions Lead · 2025–<span lang="zh">至今</span><span lang="en">present</span></p>
-            </div>
-          </div>
-          <p class="body"><span lang="zh">重寫 Power Automate 的流程邏輯並加入內部過濾，把每日 Dataverse 請求量壓下超過 80,000 次且零資料遺失。建置並維護 Dynamics 365 的客製儀表板與檢視，處理 SharePoint 與 CRM 的效能問題，並與各部門主管一起把需求談清楚、做訓練。</span><span lang="en">Rewrote the Power Automate logic and added internal filtering, cutting daily Dataverse requests by over 80,000 with zero data loss. Built and maintained custom Dynamics 365 dashboards and views, resolved SharePoint and CRM performance problems, and worked with department heads to pin down requirements and run training.</span></p>
-        </article>
-
-        <article class="role">
-          <div class="role-head">
-            <img class="role-logo" src="assets/img/GR.png" alt="" loading="lazy">
-            <div>
-              <h3 class="h-sub"><span lang="zh">投資公司 · 交易流程自動化</span><span lang="en">Investment firm · automated trading workflow</span></h3>
-              <p class="role-date">Grand River Corporation · Quantitative Automation Developer · 2020–<span lang="zh">至今</span><span lang="en">present</span></p>
-            </div>
-          </div>
-          <p class="body"><span lang="zh">以 Python 自動化交易工作流程，建立財務模型與時間序列分析。設計並實作演算法交易策略，報酬提升約 17% 並改善風險調整指標。以 Tableau、Power BI 建置決策儀表板。</span><span lang="en">Automated the trading workflow in Python and built the financial models and time‑series analysis behind it. Designed and implemented algorithmic strategies delivering roughly a 17% return uplift with better risk‑adjusted metrics. Built the decision dashboards in Tableau and Power BI.</span></p>
-        </article>
-
-        <article class="role">
-          <div class="role-head">
-            <img class="role-logo" src="assets/img/outlier.png" alt="" loading="lazy">
-            <div>
-              <h3 class="h-sub"><span lang="zh">AI 公司 · 自動化測試框架</span><span lang="en">AI company · automated test frameworks</span></h3>
-              <p class="role-date">Outlier · Data Analyst · 2024–<span lang="zh">至今</span><span lang="en">present</span></p>
-            </div>
-          </div>
-          <p class="body"><span lang="zh">開發自動化測試框架，讓客戶系統準確度提升 23%。監控效能指標找出模式，並與跨功能團隊合作排除 AI 模型的效能問題。</span><span lang="en">Built automated test frameworks that improved client system accuracy by 23%. Monitored performance metrics to surface patterns, and worked with cross‑functional teams to troubleshoot AI model performance.</span></p>
-        </article>
+  <div class="exp-list">
+    <article class="exp">
+      <img class="exp-logo" src="assets/img/freedom_concepts_inc__logo.jpg" alt="Freedom Concepts Inc." loading="lazy">
+      <div class="exp-body">
+        <h3>Digital Solutions Lead <span class="exp-co">· Freedom Concepts Inc.</span></h3>
+        <p class="exp-date">May 2025 – <span lang="zh">至今</span><span lang="en">Present</span> · Winnipeg, Canada</p>
+        <p><span lang="zh">負責全公司數位系統的設計、導入與優化：CRM、ERP、雲端方案。以 Power Automate 自動化業務流程，整併邏輯並加入內部過濾，將 Dataverse 每日請求量減少超過 80,000 次且零資料遺失。設計並維護 Dynamics 365 客製儀表板與檢視，處理 SharePoint 與 CRM 效能問題，並與各部門主管協作蒐集需求、提供訓練。</span><span lang="en">Own the design, implementation and optimisation of digital systems across the organisation: CRM, ERP and cloud solutions. Automated business processes with Power Automate, consolidating logic and adding internal filtering to cut daily Dataverse request volume by over 80,000 with zero data loss. Design and maintain custom Dynamics 365 dashboards and views, troubleshoot SharePoint and CRM performance, and work with department heads on requirements and training.</span></p>
       </div>
-    </div>
+    </article>
+    <article class="exp">
+      <img class="exp-logo" src="assets/img/GR.png" alt="Grand River Corporation" loading="lazy">
+      <div class="exp-body">
+        <h3>Quantitative Automation Developer <span class="exp-co">· Grand River Corporation</span></h3>
+        <p class="exp-date">Jul 2020 – <span lang="zh">至今</span><span lang="en">Present</span></p>
+        <p><span lang="zh">建立財務模型與時間序列分析，以 Python 自動化交易工作流程。設計並實作演算法交易策略，報酬提升約 17% 並改善風險調整指標。以 Tableau、Power BI 建置決策儀表板，並使用 TradingView、Thinkorswim 進行衍生性商品交易。</span><span lang="en">Built financial models and time‑series analysis, and automated trading workflows in Python. Designed and implemented algorithmic strategies delivering roughly a 17% return uplift and better risk‑adjusted metrics. Built leadership dashboards in Tableau and Power BI, and traded derivatives via TradingView and Thinkorswim.</span></p>
+      </div>
+    </article>
+    <article class="exp">
+      <img class="exp-logo" src="assets/img/outlier.png" alt="Outlier" loading="lazy">
+      <div class="exp-body">
+        <h3>Data Analyst <span class="exp-co">· Outlier</span></h3>
+        <p class="exp-date">Nov 2024 – <span lang="zh">至今</span><span lang="en">Present</span></p>
+        <p><span lang="zh">進行數據驅動分析並開發自動化測試框架，讓客戶系統準確度提升 23%。監控系統效能指標、找出模式，並與跨功能團隊合作排除 AI 模型效能問題。</span><span lang="en">Data‑driven analysis and automated testing frameworks that improved client system accuracy by 23%. Monitor performance metrics, surface patterns, and work with cross‑functional teams to troubleshoot AI model performance.</span></p>
+      </div>
+    </article>
   </div>
 </section>
 
 <!-- ───────── Contact ───────── -->
-<section id="contact" class="contact">
-  <div class="doc">
-    <div class="terms">
-      <dl>
-        <dt><span lang="zh">回覆時間</span><span lang="en">Reply</span></dt>
-        <dd><span lang="zh">一到兩個工作天</span><span lang="en">One to two working days</span></dd>
-        <dt><span lang="zh">時區</span><span lang="en">Time zone</span></dt>
-        <dd>Winnipeg, Canada (CST)</dd>
-        <dt><span lang="zh">這通電話</span><span lang="en">The call</span></dt>
-        <dd><span lang="zh">30 分鐘，免費，不需要準備任何資料。</span><span lang="en">30 minutes, free, nothing to prepare.</span></dd>
-      </dl>
-    </div>
-
-    <div>
-      <p class="index">07</p>
-      <h2 class="h-section"><span lang="zh">說一件最花你團隊時間的事。</span><span lang="en">Tell me the one thing that eats your team's week.</span></h2>
-      <p class="lead">
-        <span lang="zh">我會告訴你它能不能自動化、大概要多久、大概多少錢。如果不值得做，我也會直接說。</span>
-        <span lang="en">I'll tell you whether it can be automated, roughly how long it takes and roughly what it costs. If it isn't worth doing, I'll say that too.</span>
-      </p>
-      <a class="contact-mail link" href="mailto:yenchiwang.btmc@gmail.com?subject=%E8%87%AA%E5%8B%95%E5%8C%96%20%2F%20AI%20%E5%B0%88%E6%A1%88%E8%A9%A2%E5%95%8F">yenchiwang.btmc@gmail.com</a>
-      <div class="actions">
-        <a href="mailto:yenchiwang.btmc@gmail.com?subject=%E8%87%AA%E5%8B%95%E5%8C%96%20%2F%20AI%20%E5%B0%88%E6%A1%88%E8%A9%A2%E5%95%8F" class="btn"><span lang="zh">寄信給我</span><span lang="en">Email me</span></a>
-        <a href="https://www.linkedin.com/in/louis-blanc-99aab8381/" target="_blank" rel="noopener" class="link">LinkedIn</a>
-        <a href="https://github.com/YenchiSomnambule" target="_blank" rel="noopener" class="link">GitHub</a>
-      </div>
-    </div>
+<section class="contact-section" id="contact">
+  <h2 class="headline-hero"><span lang="zh">聊聊你的流程。</span><span lang="en">Let's talk about your workflow.</span></h2>
+  <p class="subhead"><span lang="zh">30 分鐘免費諮詢。告訴我最花時間的那件事，我告訴你能不能自動化、大概多少錢。</span><span lang="en">Free 30‑minute call. Tell me the one task that eats your week; I'll tell you if it can be automated and roughly what it costs.</span></p>
+  <div class="cta-row cta-buttons">
+    <a class="button" href="mailto:yenchiwang.btmc@gmail.com?subject=%E8%87%AA%E5%8B%95%E5%8C%96%20%2F%20AI%20%E5%B0%88%E6%A1%88%E8%A9%A2%E5%95%8F"><span lang="zh">寄信給我</span><span lang="en">Email me</span></a>
+    <a class="button button-secondary" href="https://www.linkedin.com/in/louis-blanc-99aab8381/" target="_blank" rel="noopener"><span lang="zh">LinkedIn 私訊</span><span lang="en">Message on LinkedIn</span></a>
   </div>
+  <p class="contact-email"><a href="mailto:yenchiwang.btmc@gmail.com">yenchiwang.btmc@gmail.com</a></p>
+  <p class="contact-note"><span lang="zh">接受遠端合作 · 中文 / 英文 · 加拿大 Winnipeg（CST）</span><span lang="en">Remote‑friendly · Mandarin / English · Winnipeg, Canada (CST)</span></p>
 </section>
 
 </main>
 
 <!-- ───────── Footer ───────── -->
 <footer class="footer">
-  <div class="doc" style="display:block">
+  <div class="footer-content">
     <div class="footer-cols">
-      <div>
-        <h4 class="label"><span lang="zh">服務</span><span lang="en">Services</span></h4>
+      <div class="footer-col">
+        <h5><span lang="zh">服務</span><span lang="en">Services</span></h5>
         <ul>
-          <li><a href="#offers"><span lang="zh">流程與數據自動化</span><span lang="en">Process &amp; Data Automation</span></a></li>
-          <li><a href="#offers"><span lang="zh">AI Agent 建置</span><span lang="en">AI Agent Setup</span></a></li>
-          <li><a href="#offers"><span lang="zh">AI 商業落地</span><span lang="en">AI Business Integration</span></a></li>
-          <li><a href="#offers"><span lang="zh">數據儀表板</span><span lang="en">Dashboards &amp; BI</span></a></li>
+          <li><a href="#services"><span lang="zh">流程與數據自動化</span><span lang="en">Process &amp; Data Automation</span></a></li>
+          <li><a href="#services"><span lang="zh">AI Agent 建置</span><span lang="en">AI Agent Setup</span></a></li>
+          <li><a href="#services"><span lang="zh">AI 商業落地</span><span lang="en">AI Business Integration</span></a></li>
+          <li><a href="#services"><span lang="zh">數據儀表板</span><span lang="en">Dashboards &amp; BI</span></a></li>
         </ul>
       </div>
-      <div>
-        <h4 class="label"><span lang="zh">合作</span><span lang="en">Working together</span></h4>
+      <div class="footer-col">
+        <h5><span lang="zh">合作</span><span lang="en">Working together</span></h5>
         <ul>
-          <li><a href="#symptoms"><span lang="zh">這些情況你認得嗎</span><span lang="en">Symptoms</span></a></li>
-          <li><a href="#process"><span lang="zh">合作方式</span><span lang="en">How it works</span></a></li>
-          <li><a href="#fit"><span lang="zh">適合與否</span><span lang="en">Fit</span></a></li>
+          <li><a href="#process"><span lang="zh">合作流程</span><span lang="en">How it works</span></a></li>
           <li><a href="#results"><span lang="zh">成果</span><span lang="en">Results</span></a></li>
+          <li><a href="#stack"><span lang="zh">技術</span><span lang="en">Stack</span></a></li>
+          <li><a href="#contact"><span lang="zh">預約諮詢</span><span lang="en">Book a call</span></a></li>
         </ul>
       </div>
-      <div>
-        <h4 class="label"><span lang="zh">關於</span><span lang="en">About</span></h4>
+      <div class="footer-col">
+        <h5><span lang="zh">關於</span><span lang="en">About</span></h5>
         <ul>
-          <li><a href="#who"><span lang="zh">跟你合作的是誰</span><span lang="en">Who you'd work with</span></a></li>
+          <li><a href="#experience"><span lang="zh">經歷</span><span lang="en">Experience</span></a></li>
+          <li><a href="#about"><span lang="zh">學歷與證照</span><span lang="en">Education &amp; certifications</span></a></li>
           <li><a href="https://github.com/YenchiSomnambule/Data_Analyst_Portfolio" target="_blank" rel="noopener"><span lang="zh">數據分析作品集</span><span lang="en">Data analyst portfolio</span></a></li>
         </ul>
       </div>
-      <div>
-        <h4 class="label"><span lang="zh">連結</span><span lang="en">Links</span></h4>
+      <div class="footer-col">
+        <h5><span lang="zh">連結</span><span lang="en">Links</span></h5>
         <ul>
           <li><a href="mailto:yenchiwang.btmc@gmail.com">Email</a></li>
           <li><a href="https://www.linkedin.com/in/louis-blanc-99aab8381/" target="_blank" rel="noopener">LinkedIn</a></li>
@@ -586,13 +553,13 @@
       </div>
     </div>
     <div class="footer-legal">
-      <p>Copyright © <span id="year">2026</span> Louis Blanc (Yenchi). <span lang="zh">保留所有權利。</span><span lang="en">All rights reserved.</span></p>
-      <ul style="display:flex;gap:var(--s3)">
+      <p class="footer-copyright">Copyright © <span id="year">2026</span> Louis Blanc (Yenchi). <span lang="zh">保留所有權利。</span><span lang="en">All rights reserved.</span></p>
+      <ul class="footer-legal-links">
         <li><a href="#top"><span lang="zh">回到頂端</span><span lang="en">Back to top</span></a></li>
         <li><button type="button" class="lang-btn-footer" data-set-lang="zh">繁體中文</button></li>
         <li><button type="button" class="lang-btn-footer" data-set-lang="en">English</button></li>
       </ul>
-      <p>Canada</p>
+      <p class="footer-region">Canada</p>
     </div>
   </div>
 </footer>
